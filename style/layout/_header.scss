@@ -1,0 +1,66 @@
+.header{
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+  
+     &__content{
+         width: 100%;
+        @include centerAll();
+        justify-content:center;
+        padding-bottom:10rem ;
+       
+     } 
+
+     &__nav{
+         z-index: 9;
+         padding: 3rem;
+        width: 100%;
+         @include spaceAll();
+        justify-content: space-evenly;
+        border-bottom: 2px solid $icongrey;
+        border-top: 2px solid $icongrey;
+         
+     }
+
+     &__logo{
+         font-size: 2.5rem;
+     }
+
+     &__menuIcon , input{
+         display: none;
+     }
+
+     &__overlay{
+         @include spaceAll();
+         justify-content: space-between;
+         width:45%;
+         font-size: 1.5rem;
+
+         .reservation{
+             display: flex;
+             align-items: center;
+
+             ion-icon{
+                 position: relative;
+                 top:.5rem;
+                 padding: 0 1.5rem;
+                 font-size: 2.5rem;
+             }
+         }
+      
+     }
+
+       
+     &__list--pages{
+        @include spaceAll();
+        list-style: none;
+     }
+
+     &__item{
+         padding:0 1rem ;
+
+     }
+}

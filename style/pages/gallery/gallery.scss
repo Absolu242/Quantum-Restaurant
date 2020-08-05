@@ -1,0 +1,96 @@
+@import '../../main.scss';
+
+.header{
+    height: 100vh;
+}
+
+.gallery{
+    position: relative;
+    top: -40rem;
+    @include centerAll();
+    width: 100%;
+    .title{
+        .shadow{
+            &::after {
+                top: 1rem;
+                left: 15rem
+            }
+    
+        }
+    
+    }
+
+    &__content{
+        width:80%;
+        @include centerAll();
+        margin-top: 10rem;
+        background-color: $cardColor;
+    }
+
+    &__top{
+        text-align: center;
+        width: 100%;
+        padding: 3rem 0;
+        border-bottom: 1px solid $icongrey;
+    }
+
+    &__links{
+        a{
+            font-size: 1.5rem;
+            padding: 3rem 0;
+            margin:0 2rem;
+
+            &:hover{
+                border-bottom: 2px solid $redColor;
+            }
+
+            &:active, &:visited{
+                color:$redColor;
+            }
+        }
+    }
+
+    &__center{
+        @include centerAll();
+        justify-content: center;
+        width:100%;
+        padding: 3rem 0;
+        border-bottom: 1px solid $icongrey;
+
+        &--content{
+            width:80%;
+            @include grid-4();
+            grid-gap:.1rem;
+            
+        }
+    }
+
+    &__item{
+        text-align: center;
+
+        img{
+            width:20rem
+        }
+    }
+
+    &__bottom{
+        padding: 2rem 0;
+        a{
+            font-weight: bold;
+
+            ion-icon{
+                position: relative;
+                top:.4rem;
+                padding: 0 .5rem;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+  
+    
+}
+
+.footer{
+    margin-top:-10rem;
+}

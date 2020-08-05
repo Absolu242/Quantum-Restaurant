@@ -1,0 +1,17 @@
+button{
+    color:$whiteColor;
+    background: none;
+    border:none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+
+
+    &.red-btn{
+        background-color: $redColor;
+    }
+
+    &.follow-btn{
+      border: 2px solid $icongrey;
+  }
+}

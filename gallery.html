@@ -14,12 +14,12 @@
   <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/pages/gallery/gallery.css">
   <title>Quantum Restaurant</title>
 </head>
 
 <body>
-  <header class="header header__gallery">
+  <header class="header header__gallery" style="background-image: url('./img/gallery.png');">
     <div class="header__content">
       <nav class="header__nav">
         <div class="header__logo">
@@ -36,18 +36,19 @@
               <li class="header__item"><a href="./menu.html">Menu</a></li>
               <li class="header__item"><a href="./gallery.html">Gallery</a></li>
               <li class="header__item"><a href="./events.html">Events</a></li>
-              <li class="header__item"><a href="./contact.html">Location+Contacts</a></li>
+              <li class="header__item"><a href="./contact.html">Location + Contacts</a></li>
             </div>
-            <li class="header__item reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservation</a></li>
           </ul>
+          <div class="reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservations</a></div>
         </div>
       </nav>
     </div>
   </header>
 
   <section class="gallery">
-      <div class="gallery__title">
-          <span><h1>Restaurant Gallery</h1></span>
+      <div class="gallery__title title">
+        <span class="shadow"></span>
+          <span class="top"><h1>Restaurant Gallery</h1></span>
       </div>
       <div class="gallery__content">
           <div class="gallery__top">
@@ -61,14 +62,31 @@
 
           <div class="gallery__center">
               <div class="gallery__center--content">
-                  <img src="./img/image1.png" alt="gallery image">
-                  <img src="./img/image2.png" alt="gallery image">
+                 <div class="gallery__item">
                   <img src="./img/image4.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
                   <img src="./img/image2.png" alt="gallery image">
-                  <img src="./img/image1.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
                   <img src="./img/image4.png" alt="gallery image">
-                  <img src="./img/image2.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
                   <img src="./img/image1.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
+                  <img src="./img/image1.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
+                  <img src="./img/image4.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
+                  <img src="./img/image2.png" alt="gallery image">
+                 </div>
+                 <div class="gallery__item">
+                  <img src="./img/image4.png" alt="gallery image">
+                 </div>
+                
               </div>
           </div>
 
@@ -122,12 +140,10 @@
       <div class="footer__bottom">
         <div class="footer__bottom--content">
           <ul class="footer__list">
-            <div class="footer__list--pages">
-              <li class="header__item"><a href="./menu.html">Menu</a></li>
-              <li class="header__item"><a href="./gallerry.html">Gallery</a></li>
-              <li class="header__item"><a href="./events">Events</a></li>
-              <li class="header__item"><a href="./location">Location+Contacts</a></li>
-            </div>
+              <li class="footer__list--item"><a href="./menu.html">Menu</a></li>
+              <li class="footer__list--item"><a href="./gallery.html">Gallery</a></li>
+              <li class="footer__list--item"><a href="./events">Events</a></li>
+              <li class="footer__list--item"><a href="./contact.html">Location + Contacts</a></li>
           </ul>
           <div class="footer__copy">
             <p>&copy;Quantum 2020, All Rights Reserved.</p>

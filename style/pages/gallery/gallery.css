@@ -353,4 +353,133 @@ p {
   font-size: 1.3rem;
   color: #4d4d4d;
 }
-/*# sourceMappingURL=main.css.map */
+
+.header {
+  height: 100vh;
+}
+
+.gallery {
+  position: relative;
+  top: -40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.gallery .title .shadow::after {
+  top: 1rem;
+  left: 15rem;
+}
+
+.gallery__content {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10rem;
+  background-color: #262626;
+}
+
+.gallery__top {
+  text-align: center;
+  width: 100%;
+  padding: 3rem 0;
+  border-bottom: 1px solid #4d4d4d;
+}
+
+.gallery__links a {
+  font-size: 1.5rem;
+  padding: 3rem 0;
+  margin: 0 2rem;
+}
+
+.gallery__links a:hover {
+  border-bottom: 2px solid #e63a2e;
+}
+
+.gallery__links a:active, .gallery__links a:visited {
+  color: #e63a2e;
+}
+
+.gallery__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 0;
+  border-bottom: 1px solid #4d4d4d;
+}
+
+.gallery__center--content {
+  width: 80%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  grid-gap: .1rem;
+}
+
+.gallery__item {
+  text-align: center;
+}
+
+.gallery__item img {
+  width: 20rem;
+}
+
+.gallery__bottom {
+  padding: 2rem 0;
+}
+
+.gallery__bottom a {
+  font-weight: bold;
+}
+
+.gallery__bottom a ion-icon {
+  position: relative;
+  top: .4rem;
+  padding: 0 .5rem;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: -10rem;
+}
+/*# sourceMappingURL=gallery.css.map */

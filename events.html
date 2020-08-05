@@ -14,20 +14,24 @@
   <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/pages/events/events.css">
   <title>Quantum Restaurant</title>
 </head>
 
 <body>
-  <header class="header header__events">
+  <header class="header header__events" style="background-image:url('./img/promotions.png')">
     <div class="header__content">
       <nav class="header__nav">
         <div class="header__logo">
           <a href="./index.html"><strong>QUANTUM</strong></a>
         </div>
         <div class="header__menuIcon">
-         <label for="overlay"> <ion-icon class="open" name="menu-outline"></ion-icon></label>
-         <label for="overlay"> <ion-icon class="close" name="close-outline"></ion-icon></label>
+          <label for="overlay">
+            <ion-icon class="open" name="menu-outline"></ion-icon>
+          </label>
+          <label for="overlay">
+            <ion-icon class="close" name="close-outline"></ion-icon>
+          </label>
         </div>
         <input type="checkbox" name="overlay" id="overlay">
         <div class="header__overlay">
@@ -36,186 +40,233 @@
               <li class="header__item"><a href="./menu.html">Menu</a></li>
               <li class="header__item"><a href="./gallery.html">Gallery</a></li>
               <li class="header__item"><a href="./events.html">Events</a></li>
-              <li class="header__item"><a href="./contact.html">Location+Contacts</a></li>
+              <li class="header__item"><a href="./contact.html">Location + Contacts</a></li>
             </div>
-            <li class="header__item reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservation</a></li>
           </ul>
+          <div class="reservation"><a href="./reservation.html">
+              <ion-icon name="calendar-outline"></ion-icon> Reservations
+            </a></div>
         </div>
       </nav>
     </div>
   </header>
 
   <section class="Events">
-      <div class="Events__title">
-          <span><h1>Upcoming Events and Promotions</h1></span>
-      </div>
-      <div class="Events__content">
-          <div class="Events__center">
-              <div class="Events__center--content">
-                  <div class="Events__item">
-                    <span class="tag">
-                        <p>NEWS</p>
-                    </span>
-                    <span class="info">
-                        <span class="Events__date"><p>24 Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>5 Ways To Make Your Bbq A
-                                Memorable Family Event</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
+    <div class="Events__title title">
+      <span class="shadow"></span>
+      <span class="top">
+        <h1>Upcoming Events and Promotions</h1>
+      </span>
+    </div>
+    <div class="Events__content">
+      <div class="Events__center">
+        <div class="Events__center--content">
+          <div class="Events__item" style="background-image: url('./img/event1.png');">
+            <div class="Events__item--content">
+              <span class="tag">
+                NEWS
+              </span>
+              <span class="info">
+                <span class="Events__date">
+                  <p>24 Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>5 Ways To Make Your Bbq A
+                    Memorable Family Event</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
 
-                    <span class="hover">
-                        <span class="Events__date"><p>24 Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>5 Ways To Make Your Bbq A
-                                Memorable Family Event</p>
-                        </span>
-                        <span class="Events__description">
-                            <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing more and more recipe books ...</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-                  </div>
-
-                  <div class="Events__item">
-                    <span class="tag">
-                        <p>NEWS</p>
-                    </span>
-                    <span class="info">
-                        <span class="Events__date"><p>24 Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>Love Food Read All About It With 
-                                A Cooking Magazine Subscription</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-
-                    <span class="hover">
-                        <span class="Events__date"><p>24 Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>Love Food Read All About It With 
-                                A Cooking Magazine Subscription</p>
-                        </span>
-                        <span class="Events__description">
-                            <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing more and more recipe books ...</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-                  </div>
-
-                  <div class="Events__item">
-                    <span class="tag">
-                        <p>NEWS</p>
-                    </span>
-                    <span class="info">
-                        <span class="Events__date"><p>24 Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>5 Ways To Make Your Bbq A
-                                Memorable Family Event</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-
-                    <span class="hover">
-                        <span class="Events__date"><p>24 Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>5 Ways To Make Your Bbq A
-                                Memorable Family Event</p>
-                        </span>
-                        <span class="Events__description">
-                            <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing more and more recipe books ...</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-                  </div>
-
-                  <div class="Events__item">
-                    <span class="tag">
-                        <p>NEWS</p>
-                    </span>
-                    <span class="info">
-                        <span class="Events__date"><p>26 Sep 2020</p></span>
-                        <span class="Events__title">
-                            <p>Love Food Read All About It With 
-                                A Cooking Magazine Subscription</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-
-                    <span class="hover">
-                        <span class="Events__date"><p>26 Sep 2020</p></span>
-                        <span class="Events__title">
-                            <p>Love Food Read All About It With 
-                                A Cooking Magazine Subscription</p>
-                        </span>
-                        <span class="Events__description">
-                            <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing more and more recipe books ...</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-                  </div>
-
-                  <div class="Events__item">
-                    <span class="tag">
-                        <p>NEWS</p>
-                    </span>
-                    <span class="info">
-                        <span class="Events__date"><p>07 Nov 2020</p></span>
-                        <span class="Events__title">
-                            <p>When To Use High Heat On Your 
-                                Barbeque</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-
-                    <span class="hover">
-                        <span class="Events__date"><p>07 Nov Jun 2020</p></span>
-                        <span class="Events__title">
-                            <p>When To Use High Heat On Your 
-                                Barbeque</p>
-                        </span>
-                        <span class="Events__description">
-                            <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing more and more recipe books ...</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-                  </div>
-
-                  <div class="Events__item">
-                    <span class="tag">
-                        <p>NEWS</p>
-                    </span>
-                    <span class="info">
-                        <span class="Events__date"><p>26 Sep 2020</p></span>
-                        <span class="Events__title">
-                            <p>Make Grilling A Healthy 
-                                Experience</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-
-                    <span class="hover">
-                        <span class="Events__date"><p>26 Sep 2020</p></span>
-                        <span class="Events__title">
-                            <p>Make Grilling A Healthy 
-                                Experience</p>
-                        </span>
-                        <span class="Events__description">
-                            <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are seeing more and more recipe books ...</p>
-                        </span>
-                        <span> <button class="follow-btn">READ MORE</button></span>
-                    </span>
-                  </div>
-              </div>
-
-              </div>
+              <span class="hover">
+                <span class="Events__date">
+                  <p>24 Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>5 Ways To Make Your Bbq A
+                    Memorable Family Event</p>
+                </span>
+                <span class="Events__description">
+                  <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we
+                    are seeing more and more recipe books ...</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+            </div>
           </div>
 
-          <div class="Events__bottom">
-              <span><a href="#">SHOW ALL <ion-icon name="arrow-down"></ion-icon></a></span>
+          <div class="Events__item"  style="background-image: url('./img/event2.png');">
+            <div class="Events__item--content">
+              <span class="tag">
+                NEWS
+              </span>
+              <span class="info">
+                <span class="Events__date">
+                  <p>24 Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>Love Food Read All About It With
+                    A Cooking Magazine Subscription</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+
+              <span class="hover">
+                <span class="Events__date">
+                  <p>24 Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>Love Food Read All About It With
+                    A Cooking Magazine Subscription</p>
+                </span>
+                <span class="Events__description">
+                  <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we
+                    are seeing more and more recipe books ...</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+            </div>
+            </span>
           </div>
+
+          <div class="Events__item"  style="background-image: url('./img/event3.png');">
+            <div class="Events__item--content">
+              <span class="tag">
+                NEWS
+              </span>
+              <span class="info">
+                <span class="Events__date">
+                  <p>24 Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>5 Ways To Make Your Bbq A
+                    Memorable Family Event</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+
+              <span class="hover">
+                <span class="Events__date">
+                  <p>24 Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>5 Ways To Make Your Bbq A
+                    Memorable Family Event</p>
+                </span>
+                <span class="Events__description">
+                  <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we
+                    are seeing more and more recipe books ...</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="Events__item"  style="background-image: url('./img/event4.png');">
+            <div class="Events__item--content">
+              <span class="tag">
+                NEWS
+              </span>
+              <span class="info">
+                <span class="Events__date">
+                  <p>26 Sep 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>Love Food Read All About It With
+                    A Cooking Magazine Subscription</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+
+              <span class="hover">
+                <span class="Events__date">
+                  <p>26 Sep 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>Love Food Read All About It With
+                    A Cooking Magazine Subscription</p>
+                </span>
+                <span class="Events__description">
+                  <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we
+                    are seeing more and more rec ipe books ...</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="Events__item"  style="background-image: url('./img/event5.png');">
+            <div class="Events__item--content">
+              <span class="tag">
+                NEWS
+              </span>
+              <span class="info">
+                <span class="Events__date">
+                  <p>07 Nov 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>When To Use High Heat On Your
+                    Barbeque</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+
+              <span class="hover">
+                <span class="Events__date">
+                  <p>07 Nov Jun 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>When To Use High Heat On Your
+                    Barbeque</p>
+                </span>
+                <span class="Events__description">
+                  <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we
+                    are seeing more and more recipe books ...</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="Events__item"  style="background-image: url('./img/event1.png');">
+            <div class="Events__item--content">
+              <span class="tag">
+                NEWS
+              </span>
+              <span class="info">
+                <span class="Events__date">
+                  <p>26 Sep 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>Make Grilling A Healthy
+                    Experience</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+
+              <span class="hover">
+                <span class="Events__date">
+                  <p>26 Sep 2020</p>
+                </span>
+                <span class="Events__title">
+                  <p>Make Grilling A Healthy
+                    Experience</p>
+                </span>
+                <span class="Events__description">
+                  <p>It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we
+                    are seeing more and more recipe books ...</p>
+                </span>
+                <span> <button class="follow-btn">READ MORE</button></span>
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </div>
+
+    <div class="Events__bottom">
+      <span><a href="#">SHOW ALL <ion-icon name="arrow-down"></ion-icon></a></span>
+    </div>
+    </div>
   </section>
 
   <footer class="footer">
@@ -230,7 +281,7 @@
               <p>Today 10:00 am - 7:00 pm</p>
             </span>
             <span class="link">
-              <a href="#">Working hours  <ion-icon name="chevron-forward-outline"></ion-icon></a>
+              <a href="#">Working hours <ion-icon name="chevron-forward-outline"></ion-icon></a>
             </span>
           </div>
 
@@ -242,7 +293,7 @@
               <p>244 Fifth Ave New York, NY 10001</p>
             </span>
             <span class="link">
-              <a href="#">Get Directions  <ion-icon name="chevron-forward-outline"></ion-icon></a>
+              <a href="#">Get Directions <ion-icon name="chevron-forward-outline"></ion-icon></a>
             </span>
           </div>
 
@@ -254,7 +305,7 @@
               <p>+1(451) 875 8985</p>
             </span>
             <span class="link">
-              <a href="#">Call Online  <ion-icon name="chevron-forward-outline"></ion-icon></a>
+              <a href="#">Call Online <ion-icon name="chevron-forward-outline"></ion-icon></a>
             </span>
           </div>
         </div>
@@ -262,12 +313,10 @@
       <div class="footer__bottom">
         <div class="footer__bottom--content">
           <ul class="footer__list">
-            <div class="footer__list--pages">
-              <li class="header__item"><a href="./menu.html">Menu</a></li>
-              <li class="header__item"><a href="./gallerry.html">Gallery</a></li>
-              <li class="header__item"><a href="./events">Events</a></li>
-              <li class="header__item"><a href="./location">Location+Contacts</a></li>
-            </div>
+            <li class="footer__list--item"><a href="./menu.html">Menu</a></li>
+            <li class="footer__list--item"><a href="./gallery.html">Gallery</a></li>
+            <li class="footer__list--item"><a href="./events">Events</a></li>
+            <li class="footer__list--item"><a href="./contact.html">Location + Contacts</a></li>
           </ul>
           <div class="footer__copy">
             <p>&copy;Quantum 2020, All Rights Reserved.</p>
