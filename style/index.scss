@@ -31,6 +31,14 @@ $icongrey:#4d4d4d;
         color:$whiteColor;
         text-decoration: none;
         cursor: pointer;
+
+        &:active{
+            color: $redColor;
+        }
+    }
+
+    button{
+        outline:none;
     }
 
 }
@@ -51,17 +59,22 @@ body{
         background-position-y: 50%;
         background-repeat: no-repeat;
       
+    @media(max-width:768px){
         &::after {
             content: '';
             display: inline-block;
             position: absolute;
             width: 100%;
+            height:105rem;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            background-image:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.472), rgba(0, 0, 0, 0.596))
         
         }
+    }
 
 
          &__content{
@@ -122,6 +135,36 @@ body{
 
          }
 
+         @media(max-width:768px){
+          
+            &__nav{  
+               justify-content: space-between;
+            }
+   
+            &__logo{
+                font-size: 2rem;
+            }
+   
+            &__menuIcon{
+                display: block;
+                color: $whiteColor;
+
+                ion-icon{
+                    font-size:3rem;
+                }
+                .close{
+                    display: none;
+                }
+            }
+   
+            &__overlay{
+               display: none;
+             
+            }
+        }
+
+         
+
     /*******Nav End ******/
 
     &__center{
@@ -148,6 +191,15 @@ body{
                 padding: 3rem 0;
             }
 
+            @media(max-width:768px){
+                h1{
+                    font-size: 3rem;
+                }
+              p{
+                width:40rem
+              }
+            }
+
         }
 
         &--button{
@@ -160,6 +212,7 @@ body{
               margin:0 1.5rem;
               font-weight: 500;
               cursor: pointer;
+              margin: 1rem ;
 
               p{
                 position: relative;
@@ -195,6 +248,10 @@ body{
             justify-content: space-between;
             width: 50%;
             padding-bottom: 10rem ;
+
+            @media(max-width:768px){
+               @include centerAll();
+            }
         }
 
         &--item{
@@ -237,6 +294,8 @@ body{
         @include centerAll();
         width: 60%;
         background-color: $cardColor;
+
+        
     }
 
     &__text{
@@ -283,6 +342,72 @@ body{
 
     &__sliders{
         @include spaceAll();
+
+       
+    }
+
+    &__controller{
+         button{
+             background: none;
+             border:none;
+             
+
+             ion-icon{
+                 color:$icongrey;
+                 font-size:3.5rem;
+
+                 &:active{
+                    color: $redColor;
+                }
+             }
+
+             
+         }
+    }
+
+    @media(max-width:768px){
+        &__content{
+           width:100%;
+    
+            
+        }
+    
+        &__text{
+            text-align: center;
+            padding: 5rem 0;
+        }
+    
+    
+        .title{
+            .shadow{
+                font-size: 8rem;
+                font-weight: bolder;
+                color: $colorShadow;
+    
+                &-top{
+                    font-size: 2rem;
+                    letter-spacing:0;
+                }
+            }
+        }
+    
+        &__description{
+            p{
+                font-size: 1.3rem;
+                color:$textColor;
+                width: 40rem;
+                line-height: 2rem;
+            }
+        }
+    
+        &__sliders{
+            @include centerAll();
+        }
+
+        &__controller{
+          position: relative;
+          top:2rem;
+       }
     }
 }
 
@@ -343,6 +468,14 @@ body{
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: 350px;
             grid-gap:2rem;
+
+            @media(max-width:768px){
+                grid-template-columns: 1fr;
+
+                .grid__event{
+                    margin: 1rem 0;
+                }
+            }
         }
 
         &__blog{
@@ -556,6 +689,10 @@ body{
                 grid-template-columns: repeat(3,250px);
                 grid-template-rows: 250px;
                 grid-gap:2rem;
+
+                @media(max-width:768px){
+                    grid-template-columns: 250px;
+                }
             
         }
 
@@ -642,4 +779,88 @@ body{
                 }
             }
         }
+}
+
+.footer{
+    padding-top:5rem ;
+    margin-top: 30rem ;
+    width:100%;
+    background-color: $cardColor;
+    @include centerAll();
+    &__content{
+        width:100%;
+        @include centerAll();
+    }
+
+    &__top{
+        z-index:9999;
+        width:100%;
+        @include centerAll();
+        border-bottom: 1px solid $icongrey;
+        
+        &--content{
+            @include spaceAll();
+            justify-content: space-between;
+            width: 50%;
+            padding-bottom: 5rem ;
+
+            @media(max-width:768px){
+                @include centerAll();
+            }
+        }
+
+        &--item{
+            text-align: center;
+            color: $whiteColor;
+            line-height: 3rem;
+
+            .icon{
+                font-size: 2.5rem;
+                color: $icongrey !important;
+            }
+
+            .time{
+                font-size: 1.5rem;
+            }
+
+            .link{
+                font-size: 1.3rem;
+                a{
+                    color: $icongrey  !important;
+                }
+                ion-icon{
+                    position: relative;
+                    top: .3rem;
+                    padding-right: 1rem;
+                    
+                }
+
+            }
+        }
+    }
+
+    &__bottom{
+        text-align: center;
+        padding: 5rem 0 ;
+        @include centerAll();
+        align-items: center;
+        &--content{
+
+        }
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        padding:1rem 0 ;
+        &--item{
+            font-size: 1.4rem;
+            padding: 0 1rem ;
+        }
+    }
+
+    &__copy{
+        font-size: 1.3rem;
+        color:$icongrey;
+    }
 }
