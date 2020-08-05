@@ -1,0 +1,645 @@
+$whiteColor:#fff;
+$blackColor:#000000;
+$redColor:#e63a2e;
+$textColor:#e6e6e6;
+$textPostColor:#d9d9d9;
+$gradiant:#212121;
+$cardColor:#262626;
+$colorShadow:#292929;
+$twitter:#00a2f9;
+$facebook:#33589c;
+$icongrey:#4d4d4d;
+
+@mixin centerAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin spaceAll{
+    display: flex;
+    align-items: center;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    a{
+        color:$whiteColor;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    background-color: $gradiant;
+}
+
+.header{
+        @include centerAll();
+        width:100%;
+        background-position: center;
+        background-size: cover;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+      
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        
+        }
+
+
+         &__content{
+             width: 100%;
+            @include centerAll();
+            justify-content:center;
+            padding-bottom:10rem ;
+           
+         } 
+
+         &__nav{
+             z-index: 9;
+             padding: 3rem;
+            width: 100%;
+             @include spaceAll();
+            justify-content: space-evenly;
+            border-bottom: 2px solid $icongrey;
+            border-top: 2px solid $icongrey;
+             
+         }
+
+         &__logo{
+             font-size: 2.5rem;
+         }
+
+         &__menuIcon , input{
+             display: none;
+         }
+
+         &__overlay{
+             @include spaceAll();
+             justify-content: space-between;
+             width:45%;
+             font-size: 1.5rem;
+
+             .reservation{
+                 display: flex;
+                 align-items: center;
+
+                 ion-icon{
+                     position: relative;
+                     top:.5rem;
+                     padding: 0 1.5rem;
+                     font-size: 2.5rem;
+                 }
+             }
+          
+         }
+
+           
+         &__list--pages{
+            @include spaceAll();
+            list-style: none;
+         }
+
+         &__item{
+             padding:0 1rem ;
+
+         }
+
+    /*******Nav End ******/
+
+    &__center{
+        z-index: 9;
+        @include centerAll();
+        text-align: center;
+
+        &--content{
+            padding: 10rem 0;
+        }
+
+        &--text{
+            
+            h1{
+                font-size: 4rem;
+                font-weight: lighter;
+                color:$whiteColor;
+            }
+            p{
+                color:$textColor;
+                font-size: 1.4rem;
+                width: 60rem;
+                line-height: 3rem;
+                padding: 3rem 0;
+            }
+
+        }
+
+        &--button{
+          button{
+              padding: 1.3rem 2.5rem;
+              color:$whiteColor;
+              background: none;
+              border:none;
+              border-radius: 5px;
+              margin:0 1.5rem;
+              font-weight: 500;
+              cursor: pointer;
+
+              p{
+                position: relative;
+                top: -0.3rem;
+              }
+
+              ion-icon{
+                  position: relative;
+                  top: .3rem;
+                  padding-right: 1rem;
+                  font-size: 1.8rem;
+              }
+
+              &.red-btn{
+                  background-color: $redColor;
+              }
+
+              &.follow-btn{
+                padding: 1rem 2.5rem;
+                border: 2px solid $icongrey;
+            }
+          }
+        }
+    }
+
+    &__bottom{
+        z-index:9999;
+        width:100%;
+        @include centerAll();
+        
+        &--content{
+            @include spaceAll();
+            justify-content: space-between;
+            width: 50%;
+            padding-bottom: 10rem ;
+        }
+
+        &--item{
+            text-align: center;
+            color: $whiteColor;
+            line-height: 3rem;
+
+            .icon{
+                font-size: 2.5rem;
+            }
+
+            .time{
+                font-size: 1.5rem;
+            }
+
+            .link{
+                font-size: 1.3rem;
+                ion-icon{
+                    position: relative;
+                    top: .3rem;
+                    padding-right: 1rem;
+                    
+                }
+
+            }
+        }
+    }
+
+}
+
+.about{
+    @include centerAll();
+    justify-content: center;
+    width:100%;
+    position: relative;
+    top: -12rem;
+
+    &__content{
+        padding: 5rem;
+        @include centerAll();
+        width: 60%;
+        background-color: $cardColor;
+    }
+
+    &__text{
+        text-align: center;
+        padding: 5rem;
+    }
+
+    &__tag{
+        background-color: $redColor;
+        font-weight: bold;
+        color: $whiteColor;
+        padding: .3rem .5rem;
+        border-radius:2px ;
+    }
+
+    .title{
+        text-align: center;
+        @include centerAll();
+        position: relative;
+        top: 2rem;
+        .shadow{
+            font-size: 8rem;
+            font-weight: bolder;
+            color: $colorShadow;
+
+            &-top{
+                font-size: 2.5rem;
+                letter-spacing: .1rem;
+                color: $whiteColor;
+                position: relative;
+                top: -6.2rem;
+            }
+        }
+    }
+
+    &__description{
+        p{
+            font-size: 1.3rem;
+            color:$textColor;
+            width: 50rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__sliders{
+        @include spaceAll();
+    }
+}
+
+.events{
+    &__content{
+        
+    @include centerAll();
+    justify-content: center;
+    width:100%;
+    position: relative;
+
+    &__content{
+        padding: 5rem;
+        @include centerAll();
+        width: 60%;
+    }
+
+
+    .title{
+        text-align: center;
+        @include centerAll();
+        position: relative;
+        top: 2rem;
+        .shadow{
+            font-size: 8rem;
+            font-weight: bolder;
+            color: $colorShadow;
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                background-color: $redColor;
+                width: 5rem;
+                height: 2px;
+                top: 10rem;
+                left: 12rem;
+                right: 0;
+                bottom: 0;
+            
+            }
+
+            &-top{
+                font-size: 2.5rem;
+                letter-spacing: .1rem;
+                color: $whiteColor;
+                position: relative;
+                top: -6.2rem;
+            }
+        }
+    }
+    }
+
+    .grid{
+        position: relative;
+        top: 2rem;
+        &__content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 350px;
+            grid-gap:2rem;
+        }
+
+        &__blog{
+            width: 100%;
+            @include centerAll();
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+            background-position-x: 50%;
+            background-position-y: 50%;
+            background-repeat: no-repeat;
+
+            .post{
+                height:100%;
+                width:90%;
+                text-align: center;
+                
+                &__share{
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button{
+                        padding: .6rem .8rem;
+                        margin: .5rem;
+                        border-radius: 50%;
+                        background-color: rgba(97, 96, 96, 0.514);
+                        border:none;
+                        color:$whiteColor;
+                        font-size:1.5rem;
+                        cursor: pointer;
+                    }
+                }
+
+                &__tag{
+                    background-color: $redColor;
+                    font-weight: bold;
+                    color: $whiteColor;
+                    padding: .3rem .5rem;
+                    border-radius:2px ;
+                }
+
+                &__text{
+                    width:100%;
+                    padding: 7rem 0;
+                    color:$whiteColor;
+                    font-size: 1.2rem;
+                    text-align: center;
+                   
+                }
+
+                &__title{
+                  
+                    p{
+                       
+                        font-size: 1.4rem;
+                        padding: 2rem 2rem;
+                    }
+                }
+
+                &__actions{
+                    a{
+                        padding: 0 1rem;
+                        font-size: 1.3rem;
+
+                        ion-icon{
+                            position: relative;
+                            top:.2rem;
+                            padding: 0 .2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__events{
+            @include centerAll();
+            justify-content: space-between;
+        }
+
+        &__event{
+            background-color: $cardColor;
+            padding: 2rem;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: $redColor;
+
+                .tag{
+                    background-color: $whiteColor !important;
+                    color: $redColor !important;
+                }
+
+                .event__date{
+                    color:$whiteColor;
+                }
+                a{
+                    padding: 0 1rem;
+                    font-size: 1.2rem;
+                    color: $whiteColor !important;
+                    ion-icon{
+                        color:$icongrey;
+                        position: relative;
+                        top:.2rem;
+                        padding: 0 .2rem;
+                    }
+                }
+            }
+        }
+
+        .event{
+            &__title{
+            width:35rem;
+            color: $whiteColor;
+            font-size: 1.4rem;
+            }
+
+            &__bottom{
+                @include spaceAll();
+                padding-top: 1rem;
+                justify-content: space-between;
+                color:$whiteColor;
+
+                &--item{
+                    display: flex;
+                    align-items: center;
+                    color:$icongrey;
+
+                    .tag{
+                        background-color: $redColor;
+                        font-weight: bold;
+                        color: $whiteColor;
+                        padding: .3rem .5rem;
+                        border-radius:2px ;
+                    }
+                    span{
+                        margin-right: 1rem;
+                    }
+
+                    a{
+                        padding: 0 1rem;
+                        font-size: 1.2rem;
+                        color:$icongrey;
+                        ion-icon{
+                            position: relative;
+                            top:.2rem;
+                            padding: 0 .2rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.social{
+    position: relative;
+    top:15rem;
+    @include centerAll();
+    &__content{
+        
+        @include centerAll();
+        justify-content: center;
+        width:100%;
+        position: relative;
+    
+        &__content{
+            padding: 5rem;
+            @include centerAll();
+            width: 60%;
+        }
+    
+    
+        .title{
+            text-align: center;
+            @include centerAll();
+            position: relative;
+            top: 2rem;
+            .shadow{
+                font-size: 8rem;
+                font-weight: bolder;
+                color: $colorShadow;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    background-color: $redColor;
+                    width: 5rem;
+                    height: 2px;
+                    top: 10rem;
+                    left: 11rem;
+                    right: 0;
+                    bottom: 0;
+                
+                }
+    
+                &-top{
+                    font-size: 2.5rem;
+                    letter-spacing: .1rem;
+                    color: $whiteColor;
+                    position: relative;
+                    top: -6.2rem;
+                }
+            }
+        }
+        }
+    
+        &__items{
+            position: relative;
+                display: grid;
+                grid-template-columns: repeat(3,250px);
+                grid-template-rows: 250px;
+                grid-gap:2rem;
+            
+        }
+
+        &__item{
+            background-color: $cardColor;
+            border-radius: 5px;
+            &--top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid $icongrey;
+                padding: 1.5rem;
+
+                div{
+                    color:$whiteColor;
+                    font-size:1.3rem;
+                    .twitter{
+                        background-color: $twitter;
+                    }
+                    .instagram{
+                        background-color: $blackColor;
+                    }
+                    .facebook{
+                        background-color: $facebook;
+                    }
+
+                    span{
+                        padding: .7rem .8rem;
+                        border-radius: 50%;
+                        margin-right:.5rem;
+                        font-size:1.2rem;
+
+                        ion-icon{
+                            position:relative;
+                            top:.2rem;
+                            left:.1rem;
+                        }
+                    }
+                }
+
+
+                button{
+                    padding: .8rem 1rem;
+                    color:$whiteColor;
+                    background: none;
+                    border:none;
+                    border-radius: 2px;
+                    margin:0 1.5rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    border: 1px solid $icongrey;
+                    font-size: 1rem;
+                }
+            }
+
+            &--content{
+                padding: 1rem;
+            }
+
+            &--date{
+                color: $icongrey;
+            }
+
+            &--message{
+                color:$textColor;
+                font-size: 1.3rem;
+                p{
+                    padding: 1rem 0;
+                }
+            }
+
+            &--author{
+                color:$twitter;
+            }
+
+            &--images{
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+               
+                img{
+                    width:7.5rem;
+                    padding-bottom: .2rem;
+                }
+            }
+        }
+}

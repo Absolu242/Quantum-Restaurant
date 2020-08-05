@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>\
-  <link rel="stylesheet" href="style/index.css">
+  <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="./style/index.css">
   <title>Quantum Restaurant</title>
 </head>
 
 <body>
-  <header class="header header__index">
+  <header class="header header__index" style="background-image:url('./img/home.png')">
     <div class="header__content">
       <nav class="header__nav">
         <div class="header__logo">
@@ -35,10 +35,10 @@
               <li class="header__item"><a href="./menu.html">Menu</a></li>
               <li class="header__item"><a href="./gallery.html">Gallery</a></li>
               <li class="header__item"><a href="./events.html">Events</a></li>
-              <li class="header__item"><a href="./contact.html">Location+Contacts</a></li>
+              <li class="header__item"><a href="./contact.html">Location + Contacts</a></li>
             </div>
-            <li class="header__item reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservation</a></li>
           </ul>
+          <div class="reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservations</a></div>
         </div>
       </nav>
 
@@ -51,8 +51,8 @@
           </div>
 
           <div class="header__center--button">
-            <button><ion-icon name="restaurant"></ion-icon><p>Menu</p></button>
-            <button class="red"><ion-icon name="calendar-outline"></ion-icon> <p>MAKE RESERVATION</p></button>
+            <a href="./menu.html"></a><button class="follow-btn"><p><ion-icon name="restaurant"></ion-icon>OUR MENU</p></button></a>
+            <a href="./reservation.html"> <button class="red-btn"><p>  <ion-icon name="calendar-outline"></ion-icon>MAKE RESERVATION</p></button></a>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
         <span class="about__tag tag">ABOUT</span>
         <div class="about__title title">
           <span class="shadow">ABOUT</span>
-          <span>The Basics Of Buying A Telescope</span>
+          <span class="shadow-top">The Basics Of Buying A Telescope</span>
         </div>
         <div class="about__description">
           <p>Catering is the business of providing food service at a remote site or a site such as a hotel, public house, or other location. Catering has evolved to become an artisanal 
@@ -134,24 +134,26 @@
     <div class="events__content">
       <div class="about__title title">
         <span class="shadow">EVENTS</span>
-        <span>Upcoming Events</span>
+        <span class="shadow-top">Upcoming Events</span>
       </div>
       <div class="grid">
         <div class="grid__content">
-          <div class="grid__blog">
+          <div class="grid__blog" style="background-image:url('./img/events1.png')">
             <div class="post">
+              <span class="post__share"><button><ion-icon name="share-social"></ion-icon></button></span>
+              <br>
               <span class="post__tag tag">BLOG</span>
               <div class="post__text">
                 <span class="post__date"><p>05 Jul 2020</p></span>
                 <span class="post__title">
                   <p>Differentiate Yourself and Attract More Attention Sales</p>
                 </span>
-                <span class="author">
+                <span class="post__author">
                   <p>Jason Keller</p>
                 </span>
               </div>
 
-              <span class="actions">
+              <span class="post__actions">
                 <a href="#"><ion-icon name="eye"></ion-icon> 275</a>
                 <a href="#"><ion-icon name="chatbubbles"></ion-icon>12</a>
               </span>
@@ -218,9 +220,16 @@
 
   <section class="social">
     <div class="social__content">
+      <div class="social__title title">
+        <span class="shadow">SOCIAL</span>
+        <span class="shadow-top">We in Social</span>
+      </div>
+
+      <div class="social__items">
+        
       <div class="social__item">
-        <div class="sociol__item--top">
-          <div> <span class="twitter"><ion-icon name="logo-twitter"></ion-icon> Twitter</span></div>
+        <div class="social__item--top">
+          <div> <span class="twitter"><ion-icon name="logo-twitter"></ion-icon> </span>Twitter</div>
           <button class="social-btn"> FOLLOW US</button>
         </div>
         <div class="social__item--content">
@@ -239,23 +248,25 @@
       </div>
 
       <div class="social__item">
-        <div class="sociol__item--top">
-          <div> <span class="instagram"><ion-icon name="logo-instagram"></ion-icon> Instagram</span></div>
+        <div class="social__item--top">
+          <div> <span class="instagram"><ion-icon name="logo-instagram"></ion-icon> </span>Instagram</div>
           <button class="social-btn"> FOLLOW US</button>
         </div>
         <div class="social__item--content">
+          <div class="social__item--images">
+          <img src="./img/image2.png" alt="instagram post image">
+          <img src="./img/image4.png" alt="instagram post image">
           <img src="./img/image1.png" alt="instagram post image">
+          <img src="./img/image4.png" alt="instagram post image">
           <img src="./img/image1.png" alt="instagram post image">
-          <img src="./img/image1.png" alt="instagram post image">
-          <img src="./img/image1.png" alt="instagram post image">
-          <img src="./img/image1.png" alt="instagram post image">
-          <img src="./img/image1.png" alt="instagram post image">
+          <img src="./img/image2.png" alt="instagram post image">
+          </div>
         </div>
       </div>
 
       <div class="social__item">
-        <div class="sociol__item--top">
-          <div> <span class="twitter"><ion-icon name="logo-twitter"></ion-icon> Twitter</span></div>
+        <div class="social__item--top">
+          <div> <span class="facebook"><ion-icon name="logo-facebook"></ion-icon></span> Facebook</div>
           <button class="social-btn"> FOLLOW US</button>
         </div>
         <div class="social__item--content">
@@ -268,6 +279,7 @@
               overloaded with pictures.</p>
           </span>
         </div>
+      </div>
       </div>
     </div>
   </section>
