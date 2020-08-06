@@ -1,7 +1,7 @@
 @import '../../main.scss';
 
 .header{
-    height: 100vh;
+    height: 70rem;
 }
 
 .Events{
@@ -13,11 +13,9 @@
         .shadow{
             &::after {
                 top: 1rem;
-                left: 15rem
+                left: 28rem
             }
-    
         }
-    
     }
 
 
@@ -29,9 +27,12 @@
       
 
         &--content{
-            width:60%;
-            @include grid-3();
+            position: relative;
+            display:grid;
+            width:100%;
+            grid-template-columns: repeat(3,250px);
             grid-template-rows: 350px 350px;
+            grid-gap:1rem;
         }
     }
 
@@ -39,7 +40,9 @@
         border: 1px solid $icongrey;
         border-radius: 5px;
         width:100%;
+        
         &--content{
+           
             color:$whiteColor;
             width: 100%;
            
@@ -50,7 +53,7 @@
             }
             .info{
                 padding: 2rem;
-                display: none;
+                display: block;
                 position: relative;
                 top:16rem;
 
@@ -72,12 +75,13 @@
                 }
             }
             .hover{
-                padding: 2rem;
-                display: block;
                 position: relative;
-                top:8rem;
+                padding: 2rem;
+                display: none;
+                top:7.3rem;
                 background-color: $cardColor;
-                width: 100%;
+                transition: all .3s ease-in-out;
+                border-radius: 5px;
 
 
                 .Events__title{
@@ -88,7 +92,7 @@
                 }
 
                 button{
-                    margin: 1rem 0;
+                    margin-top: 1rem ;
                     padding: .8rem;
 
                     &:hover{
@@ -98,68 +102,14 @@
                     }
                 }
             }
-        }
 
-        &:last-child{
-
-            &--content{
-                color:$whiteColor;
-                width: 100%;
-               
-                .tag{
-                    position: relative;
-                    top: 2rem;
-                    left: 2rem;
-                }
+            &:hover{
                 .info{
-                    padding: 2rem;
                     display: none;
-                    position: relative;
-                    top:16rem;
-    
-                    .Events__title{
-                       p{
-                        font-weight: 600;
-                        padding: 2rem 0;
-                       }
-                    }
-    
-                    button{
-                        padding: .8rem;
-    
-                        &:hover{
-                            border-color: $redColor;
-                            outline: none;
-                            background-color: $redColor;
-                        }
-                    }
                 }
+
                 .hover{
-                    padding: 2rem;
                     display: block;
-                    position: relative;
-                    top:8rem;
-                    background-color: $cardColor;
-                    width: 100%;
-    
-    
-                    .Events__title{
-                       p{
-                        font-weight: 600;
-                        padding-bottom: 5rem;
-                       }
-                    }
-    
-                    button{
-                        margin: 1rem 0;
-                        padding: .8rem;
-    
-                        &:hover{
-                            border-color: $redColor;
-                            outline: none;
-                            background-color: $redColor;
-                        }
-                    }
                 }
             }
         }

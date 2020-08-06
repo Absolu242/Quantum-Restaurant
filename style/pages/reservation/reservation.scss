@@ -1,0 +1,277 @@
+@import '../../main.scss';
+
+.header{
+    height: 70rem;
+}
+
+.Reservation{
+    position: relative;
+    top: -40rem;
+    @include centerAll();
+    width: 100%;
+    .title{
+        .shadow{
+            &::after {
+                top: 1rem;
+                left: 13rem
+            }
+        }
+    }
+
+
+    &__content{
+        @include centerAll();
+        justify-content: center;
+        width: 65%;
+        padding: 3rem 0;
+    }
+        
+
+    &__table{
+       width: 100%;
+        background-color: $cardColor;
+
+        &--content{
+            display: flex;
+            align-items: flex-start;
+            padding: 5rem;
+            width: 100%;
+
+            .table{
+                &--left{
+                padding: .8rem 1rem;
+                border: 1px solid $greyColor;
+                border-radius: 50%;
+                margin-right:2rem;
+                    ion-icon{
+                        color:$whiteColor;
+                        font-size: 1.3rem;
+                    }
+                }
+
+
+                &--title{
+                    font-size: 1.6rem;
+                    color: $whiteColor;
+                }
+
+                &--right{
+                    width: 100%;
+                    .form{
+                        &__table{
+                            width: 70%;
+                            padding: 3rem 0;
+                            &--content{
+                                display: flex;
+                                justify-content: space-between;
+
+                                .input{
+                                    input, select, button{
+                                        background: none;
+                                        padding: 1rem 2rem;
+                                        color: $greyColor;
+                                        border: none;
+                                        border-radius: 3px;
+                                        border: 1px solid $greyColor;
+                                        outline: none;
+                                    }
+
+                                    button{
+                                        background-color: $redColor;
+                                        font-size: 1.2rem;
+                                        font-weight: 600;
+                                        color: $whiteColor;
+                                        border: none;
+                                        padding: 1.3rem 2rem;
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+
+                    .available{
+                        &__content{
+                            color:$greyColor ;
+
+                            .buttons{
+                                padding: 2rem 0;
+
+                                button{
+                                   
+                                    font-size: 1.2rem;
+                                    font-weight: 600;
+                                    margin-right: 1rem;
+                                    padding: 1.3rem 2rem;
+                                    border: 1px solid $greyColor;
+                                    border-radius: 3px;
+
+                                    &:hover, &:active{
+                                        border: none;
+                                        color: $whiteColor;
+                                        background-color: $redColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   
+    
+    
+    &__info{
+        width: 100%;
+        background-color: $cardColor;
+        margin: 3rem 0;
+
+        &--content{
+            display: flex;
+            align-items: flex-start;
+            padding: 5rem;
+            width: 100%;
+
+            .info{
+                &--left{
+                padding: .8rem 1rem;
+                border: 1px solid $greyColor;
+                border-radius: 50%;
+                margin-right:2rem;
+                    ion-icon{
+                        color:$whiteColor;
+                        font-size: 1.3rem;
+                    }
+                }
+
+
+                &--title{
+                    font-size: 1.6rem;
+                    color: $whiteColor;
+                }
+
+                &--right{
+                    width: 100%;
+                    .form{
+                        &__info{
+                            width: 65%;
+                            padding: 2rem 0;
+                            &--content{
+                                @include centerAll();
+
+                                .input{
+                                    input, select, button{
+                                        background: none;
+                                        color: $whiteColor;
+                                        border: none;
+                                        border-radius: 3px;
+                                        border: 1px solid $greyColor;
+                                        outline: none;
+
+                                        &::placeholder{
+                                            color: $greyColor;
+                                        }
+                                    }
+
+                                    button{
+                                        background-color: $redColor;
+                                        font-size: 1.2rem;
+                                        font-weight: 600;
+                                        color: $whiteColor;
+                                        border: none;
+                                        padding: 1.3rem 2rem;
+                                    }
+                                   
+                                }
+
+                                .top{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    input{
+                                        padding: 1.4rem 2rem;
+                                        padding-right: 7rem;
+                                        
+                                        color: $whiteColor;
+
+                                        &::placeholder{
+                                            color: $greyColor;
+                                        }
+                                    }
+                                }
+
+                                .center{
+                                    width: 100%;
+                                    padding: 2rem 0;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    input{
+                                        padding: 1.4rem 0rem;
+                                        padding-left: 1.5rem;
+                                        color: $whiteColor;
+
+                                        &::placeholder{
+                                            color: $greyColor;
+                                        }
+                                    }
+
+                                     select{
+                                        padding: 1.4rem;  
+                                    }
+                                   
+
+                                    
+                                }
+
+                                .bottom{
+                                    width: 100%;
+                                    input{
+                                        width: 100%;
+                                        padding: 1.4rem 2rem;
+                                        padding-right: 20rem;
+                                    }
+                                }
+
+                                .demand{
+                                    width: 100%;
+                                    display: flex;
+                                    padding: 2rem 0;
+                                    align-items: center;
+                                    color: $greyColor;
+                                    input{
+                                      
+                                    }
+                                    p{
+                                        font-weight: 600;
+                                        padding:0 1.5rem;
+                                    }
+                                }
+
+                                .submit{
+                                    width: 100%;
+                                }
+                                
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
+  
+
+
+.footer{
+    margin-top:-10rem;
+}

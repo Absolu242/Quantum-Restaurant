@@ -359,7 +359,7 @@ p {
   height: 70rem;
 }
 
-.menu {
+.Event {
   position: relative;
   top: -40rem;
   display: -webkit-box;
@@ -378,13 +378,13 @@ p {
   width: 100%;
 }
 
-.menu .title .shadow::after {
+.Event .title .shadow::after {
   top: 1rem;
-  left: 6rem;
+  left: 28rem;
 }
 
-.menu__content {
-  width: 70%;
+.Event__page--content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,102 +398,248 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10rem;
-  background-color: #262626;
-}
-
-.menu__top {
-  text-align: center;
-  width: 100%;
-  padding: 3rem 0;
-  border-bottom: 1px solid #4d4d4d;
-}
-
-.menu__links a {
-  font-size: 1.5rem;
-  padding: 3rem 0;
-  margin: 0 2rem;
-}
-
-.menu__links a:hover {
-  border-bottom: 2px solid #e63a2e;
-}
-
-.menu__links a:active, .menu__links a:visited {
-  color: #e63a2e;
-}
-
-.menu__center {
-  width: inherit;
-  padding: 3rem 0;
-}
-
-.menu__center--content {
-  width: 80%;
   position: relative;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  grid-gap: 2rem;
+  top: 10rem;
 }
 
-.menu__item--title::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #4d4d4d;
-  height: 1px;
-  right: 0;
-  bottom: 0;
-}
-
-.menu__item--top {
-  color: #fff;
-  padding: 1rem 0;
+.Event__page--top {
+  padding: 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 70%;
+  background-color: #262626;
 }
 
-.menu__item--top .item--one::after {
-  width: 8rem;
-  top: 2.2rem;
-  left: 19rem;
+.Event__page--title {
+  padding: 2rem 0;
 }
 
-.menu__item--top .item--two::after {
-  width: 12.8rem;
-  top: 2.2rem;
-  left: 72.5%;
+.Event__page--text {
+  width: 60%;
+  padding: 2rem 0;
 }
 
-.menu__item--top .item--three::after {
-  width: 14.8rem;
-  top: 9.6rem;
-  left: 18.5%;
+.Event__page--text h2 {
+  color: #fff;
+  font-size: 2rem;
 }
 
-.menu__item--top .item--four::after {
-  width: 14.8rem;
-  top: 9.6rem;
-  left: 70%;
-}
-
-.menu__item--bottom {
+.Event__page--text .content--text {
   color: #808080;
+  font-size: 1.5rem;
+  padding: 3rem 0;
+  line-height: 2rem;
+}
+
+.Event__page--text .img__grid {
+  padding: 5rem 0;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+}
+
+.Event__page--text .img__grid--top {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+  grid-gap: 2rem;
+}
+
+.Event__page--text .img__grid--bottom {
+  width: 100%;
+}
+
+.Event__page--text .img__grid--item {
+  width: 100%;
+  padding: 2rem 0;
+  background-position: center;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.Event__page--text .img__grid--item p {
+  position: relative;
+  top: 15rem;
+  left: 2rem;
+}
+
+.Event__page--text .img__grid--item .search {
+  position: relative;
+  display: none;
+  left: 45%;
+  top: 25%;
+}
+
+.Event__page--text .img__grid--item .search button {
+  background-color: #808080;
+  padding: .8rem 1rem;
+  border-radius: 50%;
+}
+
+.Event__page--text .img__grid--item:hover .search {
+  display: block;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.Event__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.Event__center--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 50%;
+  -ms-grid-columns: (250px)[3];
+      grid-template-columns: repeat(3, 250px);
+  -ms-grid-rows: 350px;
+      grid-template-rows: 350px;
+  grid-gap: 1rem;
+}
+
+.Event__item {
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  width: 100%;
+  height: 350px;
+}
+
+.Event__item--content {
+  color: #fff;
+  width: 100%;
+}
+
+.Event__item--content .tag {
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+}
+
+.Event__item--content .info {
+  padding: 2rem;
+  display: block;
+  position: relative;
+  top: 16rem;
+}
+
+.Event__item--content .info .Event__title p {
+  font-weight: 600;
+  padding: 2rem 0;
+}
+
+.Event__item--content .info button {
+  padding: .8rem;
+}
+
+.Event__item--content .info button:hover {
+  border-color: #e63a2e;
+  outline: none;
+  background-color: #e63a2e;
+}
+
+.Event__item--content .hover {
+  position: relative;
+  padding: 2rem;
+  display: none;
+  top: 7.3rem;
+  background-color: #262626;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+}
+
+.Event__item--content .hover .Event__title p {
+  font-weight: 600;
+  padding: 2rem 0;
+}
+
+.Event__item--content .hover button {
+  margin-top: 1rem;
+  padding: .8rem;
+}
+
+.Event__item--content .hover button:hover {
+  border-color: #e63a2e;
+  outline: none;
+  background-color: #e63a2e;
+}
+
+.Event__item--content:hover .info {
+  display: none;
+}
+
+.Event__item--content:hover .hover {
+  display: block;
+}
+
+.Event__bottom {
+  padding-top: 15rem;
+}
+
+.Event__bottom a {
+  font-weight: bold;
+}
+
+.Event__bottom a ion-icon {
+  position: relative;
+  top: .4rem;
+  padding: 0 .5rem;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .footer {
-  margin-top: -10rem;
+  margin-top: -20rem;
 }
-/*# sourceMappingURL=menu.css.map */
+/*# sourceMappingURL=eventpage.css.map */

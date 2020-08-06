@@ -14,12 +14,12 @@
   <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/pages/reservation/reservation.css">
   <title>Quantum Restaurant</title>
 </head>
 
 <body>
-  <header class="header header__reservation">
+  <header class="header header__reservation" style="background-image: url('./img/receivetable.png');">
     <div class="header__content">
       <nav class="header__nav">
         <div class="header__logo">
@@ -36,18 +36,21 @@
               <li class="header__item"><a href="./menu.html">Menu</a></li>
               <li class="header__item"><a href="./gallery.html">Gallery</a></li>
               <li class="header__item"><a href="./events.html">Events</a></li>
-              <li class="header__item"><a href="./contact.html">Location+Contacts</a></li>
+              <li class="header__item"><a href="./contact.html">Location + Contacts</a></li>
             </div>
-            <li class="header__item reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservation</a></li>
           </ul>
+          <div class="reservation"><a href="./reservation.html">
+              <ion-icon name="calendar-outline"></ion-icon> Reservations
+            </a></div>
         </div>
       </nav>
     </div>
   </header>
 
   <section class="Reservation">
-      <div class="Reservation__title">
-          <span><h1>Reserve a Table</h1></span>
+      <div class="Reservation__title title">
+        <span class="shadow"></span>
+          <span class="top"><h1>Reserve a Table</h1></span>
       </div>
       <div class="Reservation__content">
          <div class="Reservation__table">
@@ -56,7 +59,7 @@
              <div class="table--right">
                  <div class="table--title"><h2>Find Table</h2></div>
                  <form action="" class="form__table">
-                     <div class="fromform__table--content">
+                     <div class="form__table--content">
                        
                         <span class="input"><input type="date" name="date" id="date"></span>
                         <div class="input">
@@ -99,7 +102,7 @@
              <div class="info--right">
                  <div class="info--title"><h2>Almost Done. Complete Your reservation </h2></div>
                  <form action="" class="form__info">
-                     <div class="from__info--content">
+                     <div class="form__info--content">
                        
                         <span class="input top">
                             <input type="text" name="firstName" placeholder="First Name" id="firstName" placeholder="First Name">
@@ -108,34 +111,26 @@
                         
                         
                         <div class="input center">
-                            <input type="tel" name="phone" id="phone">
+                            <select name="country" id="country">
+                              <option value="usa">United States +1</option>
+                              <option value="china">China 
+                                +86
+                              </option>
+                            </select>
                             <input type="number" name="number" id="">
                             <input type="email" name="email" id="email" placeholder="Email">
                         </div>
 
                         <div class="input bottom"><input type="text" placeholder="Enter a special request (Optional)"></div>
 
-                        <div class="input">
+                        <div class="input demand">
                             <input type="checkbox" name="check" id="check">
                             <p>Yes, I want to receive email messages from this restaurant.</p>
                         </div>
-                        <div class="input"><button type="submit" class="red-btn"><p>COMPLETE RESERVATION</p></button></div>
+                        <div class="input submit"><button type="submit" class="red-btn"><p>COMPLETE RESERVATION</p></button></div>
                        
                      </div>
                  </form>
-
-                 <div class="available">
-                    <div class="available__content">
-                        <p>Availability time on 19 July</p>
-
-                        <div class="buttons">
-                            <button class="follow-btn">08:20</button>
-                            <button class="follow-btn">09:40</button>
-                            <button class="follow-btn">10:40</button>
-                            <button class="follow-btn">11:40</button>
-                        </div>
-                    </div>
-                 </div>
 
              </div>
             </div>
@@ -188,12 +183,10 @@
       <div class="footer__bottom">
         <div class="footer__bottom--content">
           <ul class="footer__list">
-            <div class="footer__list--pages">
-              <li class="header__item"><a href="./menu.html">Menu</a></li>
-              <li class="header__item"><a href="./gallerry.html">Gallery</a></li>
-              <li class="header__item"><a href="./events">Events</a></li>
-              <li class="header__item"><a href="./location">Location+Contacts</a></li>
-            </div>
+            <li class="footer__list--item"><a href="./menu.html">Menu</a></li>
+            <li class="footer__list--item"><a href="./gallery.html">Gallery</a></li>
+            <li class="footer__list--item"><a href="./events">Events</a></li>
+            <li class="footer__list--item"><a href="./contact.html">Location + Contacts</a></li>
           </ul>
           <div class="footer__copy">
             <p>&copy;Quantum 2020, All Rights Reserved.</p>

@@ -14,12 +14,12 @@
   <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/pages/contact/contact.css">
   <title>Quantum Restaurant</title>
 </head>
 
 <body>
-  <header class="header header__contact">
+  <header class="header header__contact" style="background-image: url('./img/contact.png');">
     <div class="header__content">
       <nav class="header__nav">
         <div class="header__logo">
@@ -36,21 +36,24 @@
               <li class="header__item"><a href="./menu.html">Menu</a></li>
               <li class="header__item"><a href="./gallery.html">Gallery</a></li>
               <li class="header__item"><a href="./events.html">Events</a></li>
-              <li class="header__item"><a href="./contact.html">Location+Contacts</a></li>
+              <li class="header__item"><a href="./contact.html">Location + Contacts</a></li>
             </div>
-            <li class="header__item reservation"><a href="./reservation.html"> <ion-icon name="calendar-outline"></ion-icon> Reservation</a></li>
           </ul>
+          <div class="reservation"><a href="./reservation.html">
+              <ion-icon name="calendar-outline"></ion-icon> Reservations
+            </a></div>
         </div>
       </nav>
     </div>
   </header>
 
   <section class="Location">
-      <div class="Location__title">
-          <span><h1>Location + Contact</h1></span>
+      <div class="Location__title title ">
+        <span class="shadow"></span>
+          <span class="top"><h1>Location + Contact</h1></span>
       </div>
       <div class="Location__content">
-         <div class="map">map</div>
+         <div class="map" style="background-image: url('./img/map.png');" >map</div>
          <div class="contact">
             <div class="contact--content">
               <div class="contact--item">
@@ -92,12 +95,10 @@
       <div class="footer__bottom">
         <div class="footer__bottom--content">
           <ul class="footer__list">
-            <div class="footer__list--pages">
-              <li class="header__item"><a href="./menu.html">Menu</a></li>
-              <li class="header__item"><a href="./gallerry.html">Gallery</a></li>
-              <li class="header__item"><a href="./events">Events</a></li>
-              <li class="header__item"><a href="./location">Location+Contacts</a></li>
-            </div>
+            <li class="footer__list--item"><a href="./menu.html">Menu</a></li>
+            <li class="footer__list--item"><a href="./gallery.html">Gallery</a></li>
+            <li class="footer__list--item"><a href="./events">Events</a></li>
+            <li class="footer__list--item"><a href="./contact.html">Location + Contacts</a></li>
           </ul>
           <div class="footer__copy">
             <p>&copy;Quantum 2020, All Rights Reserved.</p>

@@ -1,0 +1,240 @@
+@import '../../main.scss';
+
+.header{
+    height: 70rem;
+}
+
+.Event{
+    position: relative;
+    top: -40rem;
+    @include centerAll();
+    width: 100%;
+    .title{
+        .shadow{
+            &::after {
+                top: 1rem;
+                left: 28rem
+            }
+        }
+    }
+
+    &__page{
+
+            
+        &--content{
+        
+            width: 100%;
+            @include centerAll();
+            position: relative;
+            top: 10rem;
+        }
+
+        &--top{
+            padding: 5rem 0;
+            @include centerAll();
+            width:70%;
+            background-color: $cardColor;
+        }
+
+        &--title{
+            padding: 2rem 0;
+           
+        }
+
+        &--text{
+            width:60%;
+            padding: 2rem 0;
+            h2{
+                color: $whiteColor;
+                font-size: 2rem;
+            }
+
+           .content--text{
+                color: $greyColor;
+                font-size: 1.5rem;
+                padding: 3rem 0;
+                line-height: 2rem;
+            }
+
+            .img__grid{
+                padding: 5rem 0;
+                display: grid;
+                width: 100%;
+                grid-template-columns: 1fr;
+                grid-template-rows: 200px ;
+
+                &--top{
+                    display: grid;
+                    width: 100%;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 200px;
+                    grid-gap:2rem;
+                }
+
+                &--bottom{
+                    width: 100%;
+                }
+
+                &--item{
+                    width:100%;
+                    padding: 2rem 0;
+                    background-position: center;
+                    background-size: cover;
+                    background-position-x: 50%;
+                    background-position-y: 50%;
+                    background-repeat: no-repeat;
+                    color: $whiteColor;
+
+                    p{
+                        position: relative;
+                        top:15rem;
+                        left:2rem;
+                    }
+
+                    .search{
+                        position: relative;
+                        display: none;
+                        left: 45%;
+                        top:25%;
+
+                        button{
+                            background-color: $greyColor;
+                            padding: .8rem 1rem;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    &:hover{
+                        .search{
+                            display: block;
+                            transition: all .2s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+        
+      
+    }
+
+
+    &__center{
+        @include centerAll();
+        justify-content: center;
+        width:100%;
+        padding-top: 3rem ;
+      
+
+        &--content{
+            @include centerAll();
+            position: relative;
+            display:grid;
+            width:50%;
+            grid-template-columns: repeat(3,250px);
+            grid-template-rows: 350px ;
+            grid-gap:1rem;
+        }
+    }
+
+    &__item{
+        border: 1px solid $icongrey;
+        border-radius: 5px;
+        width:100%;
+        height: 350px;
+        
+        &--content{
+           
+            color:$whiteColor;
+            width: 100%;
+           
+            .tag{
+                position: relative;
+                top: 2rem;
+                left: 2rem;
+            }
+            .info{
+                padding: 2rem;
+                display: block;
+                position: relative;
+                top:16rem;
+
+                .Event__title{
+                   p{
+                    font-weight: 600;
+                    padding: 2rem 0;
+                   }
+                }
+
+                button{
+                    padding: .8rem;
+
+                    &:hover{
+                        border-color: $redColor;
+                        outline: none;
+                        background-color: $redColor;
+                    }
+                }
+            }
+            .hover{
+                position: relative;
+                padding: 2rem;
+                display: none;
+                top:7.3rem;
+                background-color: $cardColor;
+                transition: all .3s ease-in-out;
+                border-radius: 5px;
+
+
+                .Event__title{
+                   p{
+                    font-weight: 600;
+                    padding: 2rem 0;
+                   }
+                }
+
+                button{
+                    margin-top: 1rem ;
+                    padding: .8rem;
+
+                    &:hover{
+                        border-color: $redColor;
+                        outline: none;
+                        background-color: $redColor;
+                    }
+                }
+            }
+
+            &:hover{
+                .info{
+                    display: none;
+                }
+
+                .hover{
+                    display: block;
+                }
+            }
+        }
+        
+    }
+
+    &__bottom{
+        padding-top: 15rem ;
+        a{
+            font-weight: bold;
+
+            ion-icon{
+                position: relative;
+                top:.4rem;
+                padding: 0 .5rem;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+  
+    
+}
+
+.footer{
+    margin-top:-20rem;
+}

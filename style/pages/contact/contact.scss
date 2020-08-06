@@ -1,0 +1,82 @@
+@import '../../main.scss';
+
+.header{
+    height: 70rem;
+}
+
+.Location{
+    position: relative;
+    top: -40rem;
+    @include centerAll();
+    width: 100%;
+    .title{
+        .shadow{
+            &::after {
+                top: 1rem;
+                left: 16rem
+            }
+    
+        }
+    
+    }
+
+    &__content{
+        width:70%;
+        @include centerAll();
+        margin-top: 10rem;
+        background-color: $cardColor;
+
+        .map{
+            width:100%;
+            height: 20rem;
+            background-position: center;
+            background-size: cover;
+            background-position-x: 50%;
+            background-position-y: 50%;
+            background-repeat: no-repeat;
+        }
+
+        .contact{
+            width: 100%;
+            @include centerAll();
+            &--content{
+                width: 80%;
+                padding: 5rem 0;
+                @include spaceAll();
+                justify-content: space-between;
+            }
+
+            &--item{
+                color: $whiteColor;
+                
+                h2{
+                    margin-bottom: 2rem ;
+                }
+
+            }
+
+            &--info{
+               
+                color: $greyColor;
+                p{
+                   
+                    line-height: 2rem;
+                }
+            }
+        }
+    }
+
+
+       &--bottom{
+        color:$greyColor;
+
+        }
+
+    
+  
+    
+}
+
+.footer{
+    margin-top:-10rem;
+}
