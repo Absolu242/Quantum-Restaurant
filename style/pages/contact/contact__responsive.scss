@@ -1,0 +1,33 @@
+
+
+@media(max-width:768px){
+
+    @import '../../main.scss';
+
+
+    .Location{
+      
+        &__content{
+            width:90%;
+        
+            .contact{
+                &--content{
+                    width: 90%;
+                   display: block;
+                }
+
+                &--item{
+                    color: $whiteColor;
+                    padding: 2rem 0;
+        
+                }
+            }
+        }
+
+        
+    }
+
+    .footer{
+        margin-top:-10rem;
+    }
+}

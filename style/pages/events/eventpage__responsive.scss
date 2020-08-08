@@ -1,0 +1,61 @@
+@media(max-width: 768px){
+        
+    @import '../../main.scss';
+
+
+    .Event{
+        .title{
+            .shadow{
+                &::after {
+                    top: 5rem;
+                    left: 43%;
+                }
+            }
+        }
+
+        &__page{
+
+            &--top{
+                padding: 5rem 0;
+                @include centerAll();
+                width:90%;
+                background-color: $cardColor;
+            }
+
+
+            &--text{
+                width:80%;
+
+                .img__grid{
+                    grid-template-rows: 200px 200px ;
+
+                    &--top{
+                        display: grid;
+                        width: 100%;
+                        grid-template-columns: 1fr ;
+                        grid-template-rows: 200px  200px;
+                        grid-gap:2rem;
+                    }
+
+                }
+            }
+            
+        
+        }
+
+
+        &__center{
+          
+            &--content{
+                grid-template-columns: 250px;
+                grid-template-rows: repeat(3,350px) ;
+                grid-gap:1rem;
+            }
+        }
+
+    }
+
+    .footer{
+        margin-top:-20rem;
+    }
+}

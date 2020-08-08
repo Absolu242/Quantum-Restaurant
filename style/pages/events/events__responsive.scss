@@ -1,0 +1,35 @@
+@import '../../main.scss';
+
+@media(max-width:768px){
+
+
+    .Events{
+    
+        .title{
+            .shadow{
+                &::after {
+                    top: 3rem;
+                    left: 45%;
+                }
+            }
+        }
+
+
+        &__center{
+            width:100%;
+            padding: 3rem 0;
+        
+
+            &--content{
+                position: relative;
+                display:grid;
+                width:100%;
+                grid-template-columns: 250px;
+                grid-template-rows:repeat(6,350px);
+                grid-gap:1rem;
+            }
+        }
+    
+        
+    }
+}
