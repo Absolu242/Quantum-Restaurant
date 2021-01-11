@@ -1,43 +1,35 @@
-@import '../../main.scss';
-@media(max-width:768px){
-
-
-    .menu{
-
-        &__content{
-            width:90%;
+@import "../../main.scss";
+@media (max-width: 768px) {
+    .header {
+        height: 30rem;
+    }
+    .menu {
+        &__content {
+            width: 90%;
             @include centerAll();
             margin-top: 10rem;
             background-color: $cardColor;
         }
-
-
-        &__links{
-            a{
-                margin:0 1rem;
+        &__links {
+            a {
+                margin: 0 1rem;
             }
         }
-
-        &__center{
-            &--content{
-                width:80%;
-               display: grid;
-               grid-template-columns: 1fr;
-               grid-template-rows: 1fr;
+        &__center {
+            &--content {
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
             }
         }
-
-        &__item{
-
-            &--title{
-                &::after{
-                    content: '';
-                    display:none;
-                 
+        &__item {
+            &--title {
+                &::after {
+                    content: "";
+                    display: none;
                 }
             }
-
         }
-       
     }
 }

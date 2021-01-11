@@ -1,70 +1,60 @@
-@import '../../main.scss';
-
-.header{
+@import "../../main.scss";
+.header {
     height: 70rem;
 }
 
-.menu{
+.menu {
     position: relative;
-    top: -40rem;
+    min-height: 100vh;
     @include centerAll();
     width: 100%;
-    .title{
-        .shadow{
+    .title {
+        .shadow {
             &::after {
                 top: 1rem;
-                left: 6rem
+                left: 6rem;
             }
-    
         }
-    
     }
-
-    &__content{
-        width:70%;
+    &__content {
+        width: 70%;
         @include centerAll();
         margin-top: 10rem;
         background-color: $cardColor;
     }
-
-    &__top{
+    &__top {
         text-align: center;
         width: 100%;
         padding: 3rem 0;
         border-bottom: 1px solid $icongrey;
     }
-
-    &__links{
-        a{
+    &__links {
+        a {
             font-size: 1.5rem;
             padding: 3rem 0;
-            margin:0 2rem;
-
-            &:hover{
+            margin: 0 2rem;
+            &:hover {
                 border-bottom: 2px solid $redColor;
             }
-
-            &:active, &:visited{
-                color:$redColor;
+            &:active,
+            &:visited {
+                color: $redColor;
             }
         }
     }
-
-    &__center{
-        width:inherit;
+    &__center {
+        width: inherit;
         padding: 3rem 0;
-        &--content{
-            width:80%;
+        &--content {
+            width: 80%;
             @include grid-2();
         }
     }
-
-    &__item{
-
-        &--title{
-            &::after{
-                content: '';
-                display:block;
+    &__item {
+        &--title {
+            &::after {
+                content: "";
+                display: block;
                 position: absolute;
                 background-color: $icongrey;
                 height: 1px;
@@ -72,63 +62,47 @@
                 bottom: 0;
             }
         }
-
-       &--top{
-        color:$whiteColor;
-        padding: 1rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-        
-      .item--one{
-            &::after {
-                width: 8rem;
-                top: 2.2rem;
-                left: 19rem;
-            
+        &--top {
+            color: $whiteColor;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .item--one {
+                &::after {
+                    width: 8rem;
+                    top: 2.2rem;
+                    left: 19rem;
+                }
+            }
+            .item--two {
+                &::after {
+                    width: 12.8rem;
+                    top: 2.2rem;
+                    left: 72.5%;
+                }
+            }
+            .item--three {
+                &::after {
+                    width: 14.8rem;
+                    top: 9.6rem;
+                    left: 18.5%;
+                }
+            }
+            .item--four {
+                &::after {
+                    width: 14.8rem;
+                    top: 9.6rem;
+                    left: 70%;
+                }
             }
         }
-
-        .item--two{
-            &::after {
-                width: 12.8rem;
-                top: 2.2rem;
-                left: 72.5%;
-
-            
-            }
+        &--bottom {
+            color: $greyColor;
         }
-
-        .item--three{
-            &::after {
-                width: 14.8rem;
-                top: 9.6rem;
-                left: 18.5%;
-            }
-        }
-
-        .item--four{
-            &::after {
-                width: 14.8rem;
-                top: 9.6rem;
-                left: 70%;
-            }
-        }
-
-       }
-
-       &--bottom{
-        color:$greyColor;
-
-        }
-
     }
-  
-    
 }
 
-.footer{
-    margin-top:-10rem;
+.footer {
+    margin-top: -10rem;
 }

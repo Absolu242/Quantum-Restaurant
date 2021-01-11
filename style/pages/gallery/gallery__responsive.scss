@@ -1,28 +1,23 @@
-@import '../../main.scss';
+@import "../../main.scss";
+.header {
+    height: 30rem;
+}
 
-@media(max-width:768px){
-   
-
-    .gallery{
-
-        &__links{
-            a{
-                margin:0 1rem;
+@media (max-width: 768px) {
+    .gallery {
+        &__links {
+            a {
+                margin: 0 1rem;
             }
         }
-
-        &__center{
-
-            &--content{
-                width:80%;
-               display: grid;
-               grid-template-columns: 1fr;
-               grid-template-rows: 1fr;
-               grid-gap: 1rem;
-                
+        &__center {
+            &--content {
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 1rem;
             }
         }
-     
     }
-
 }

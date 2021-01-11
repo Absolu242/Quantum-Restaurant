@@ -1,183 +1,133 @@
-
-
-@media(max-width:768px){
-
-    @import '../../main.scss';
-
-    .header{
-        height: 70rem;
+@media (max-width: 768px) {
+    @import "../../main.scss";
+    .header {
+        height: 30rem;
     }
-
-    .Reservation{
+    .Reservation {
         position: relative;
-        top: -40rem;
         @include centerAll();
         width: 100%;
-        .title{
-            .shadow{
+        .title {
+            .shadow {
                 &::after {
                     top: 1rem;
-                    left: 13rem
+                    left: 13rem;
                 }
             }
         }
-
-
-        &__content{
+        &__content {
             @include centerAll();
             justify-content: center;
             width: 90%;
             padding: 3rem 0;
         }
-            
-
-        &__table{
+        &__table {
             width: 100%;
             background-color: $cardColor;
-
-            &--content{
+            &--content {
                 @include centerAll2();
                 padding: 5rem;
                 width: 100%;
-
-                .table{
-                    &--left{
-                        padding: .8rem 1rem;
+                .table {
+                    &--left {
+                        padding: 0.8rem 1rem;
                         margin-bottom: 1rem;
-                 
                     }
-
-
-                    &--right{
+                    &--right {
                         width: 100%;
-
-                        .form{
-                            &__table{
+                        .form {
+                            &__table {
                                 width: 100%;
-                                &--content{
+                                &--content {
                                     @include centerAll();
-
-                                    .input{
-                                        input, select, button{
-                                            margin: 1rem ;
+                                    .input {
+                                        input,
+                                        select,
+                                        button {
+                                            margin: 1rem;
                                         }
-                                    
                                     }
                                 }
                             }
                         }
-                        
-                    .available{
-                       
-                        &__content{
-                            @include centerAll();
-                            color:$greyColor ;
-
-                            .buttons{
+                        .available {
+                            &__content {
                                 @include centerAll();
-                                padding: 2rem 0;
-
-                                button{
-                                   margin: 1rem;
+                                color: $greyColor;
+                                .buttons {
+                                    @include centerAll();
+                                    padding: 2rem 0;
+                                    button {
+                                        margin: 1rem;
+                                    }
                                 }
                             }
                         }
-                    }
                     }
                 }
             }
         }
-
-    
-        
-        
-        &__info{
+        &__info {
             width: 100%;
             background-color: $cardColor;
             margin: 3rem 0;
-
-            &--content{
-              @include centerAll2();
+            &--content {
+                @include centerAll2();
                 padding: 5rem 2rem;
                 width: 100%;
-
-                .info{
-                    &--left{
+                .info {
+                    &--left {
                         margin-bottom: 1rem;
                     }
-
-
-                    &--right{
+                    &--right {
                         width: 100%;
-                        .form{
-                            &__info{
+                        .form {
+                            &__info {
                                 width: 100%;
                                 padding: 2rem 0;
-                                &--content{
+                                &--content {
                                     @include centerAll2();
-
-                                    .input{
-                                       
-                                        input, select, button{
-                                           margin: 1rem 0;
+                                    .input {
+                                        input,
+                                        select,
+                                        button {
+                                            margin: 1rem 0;
                                         }
-
-                                    
                                     }
-
-                                    .top{
+                                    .top {
                                         @include centerAll2();
-
-                                    
                                     }
-
-                                    .center{
+                                    .center {
                                         @include centerAll2();
-                                        
-                                        select{
-                                            padding: 1.4rem;  
-                                            option{
+                                        select {
+                                            padding: 1.4rem;
+                                            option {
                                                 background-color: $colorShadow;
                                             }
                                         }
                                     }
-
-                                    .bottom{
+                                    .bottom {
                                         @include centerAll2();
-                                        input{
+                                        input {
                                             width: 100%;
                                             padding: 1.4rem 2rem;
-                                            
                                         }
                                     }
-
-
-
-                                    .submit{
+                                    .submit {
                                         display: flex;
                                         justify-content: center;
                                         flex-direction: column;
                                         width: 100%;
                                     }
-                                    
                                 }
                             }
                         }
-
                     }
                 }
             }
         }
-
-
-
-
-
     }
-    
-
-
-    .footer{
-        margin-top:-10rem;
+    .footer {
+        margin-top: -10rem;
     }
 }

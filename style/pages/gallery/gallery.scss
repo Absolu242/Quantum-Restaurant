@@ -1,96 +1,80 @@
-@import '../../main.scss';
-
-.header{
+@import "../../main.scss";
+.header {
     height: 70rem;
 }
 
-.gallery{
+.gallery {
     position: relative;
-    top: -40rem;
     @include centerAll();
+    min-height: 100vh;
     width: 100%;
-    .title{
-        .shadow{
+    .title {
+        .shadow {
             &::after {
                 top: 1rem;
-                left: 15rem
+                left: 15rem;
             }
-    
         }
-    
     }
-
-    &__content{
-        width:80%;
+    &__content {
+        width: 80%;
         @include centerAll();
         margin-top: 10rem;
         background-color: $cardColor;
     }
-
-    &__top{
+    &__top {
         text-align: center;
         width: 100%;
         padding: 3rem 0;
         border-bottom: 1px solid $icongrey;
     }
-
-    &__links{
-        a{
+    &__links {
+        a {
             font-size: 1.5rem;
             padding: 3rem 0;
-            margin:0 2rem;
-
-            &:hover{
+            margin: 0 2rem;
+            &:hover {
                 border-bottom: 2px solid $redColor;
             }
-
-            &:active, &:visited{
-                color:$redColor;
+            &:active,
+            &:visited {
+                color: $redColor;
             }
         }
     }
-
-    &__center{
+    &__center {
         @include centerAll();
         justify-content: center;
-        width:100%;
+        width: 100%;
         padding: 3rem 0;
         border-bottom: 1px solid $icongrey;
-
-        &--content{
-            width:80%;
+        &--content {
+            width: 80%;
             @include grid-4();
-            grid-gap:.1rem;
-            
+            grid-gap: 0.1rem;
         }
     }
-
-    &__item{
+    &__item {
         text-align: center;
-
-        img{
-            width:20rem
+        img {
+            width: 20rem;
         }
     }
-
-    &__bottom{
+    &__bottom {
         padding: 2rem 0;
-        a{
+        a {
             font-weight: bold;
-
-            ion-icon{
+            ion-icon {
                 position: relative;
-                top:.4rem;
-                padding: 0 .5rem;
+                top: 0.4rem;
+                padding: 0 0.5rem;
                 font-size: 15px;
                 font-weight: bold;
             }
         }
     }
-  
-    
 }
 
-.footer{
-    margin-top:-10rem;
+.footer {
+    margin-top: -10rem;
 }

@@ -1,139 +1,117 @@
-@import '../../main.scss';
-
-.header{
+@import "../../main.scss";
+.header {
     height: 70rem;
 }
 
-.Events{
+.Events {
     position: relative;
-    top: -40rem;
+    min-height: 100vh;
+    max-width: 100%;
     @include centerAll();
     width: 100%;
-    .title{
-        .shadow{
+    .title {
+        .shadow {
             &::after {
                 top: 1rem;
-                left: 28rem
+                left: 28rem;
             }
         }
     }
-
-
-    &__center{
+    &__center {
         @include centerAll();
         justify-content: center;
-        width:100%;
+        width: 100%;
         padding: 3rem 0;
-      
-
-        &--content{
+        &--content {
             position: relative;
-            display:grid;
-            width:100%;
-            grid-template-columns: repeat(3,250px);
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 250px);
             grid-template-rows: 350px 350px;
-            grid-gap:1rem;
+            grid-gap: 1rem;
         }
     }
-
-    &__item{
+    &__item {
         border: 1px solid $icongrey;
         border-radius: 5px;
-        width:100%;
-        
-        &--content{
-           
-            color:$whiteColor;
+        width: 100%;
+        &--content {
+            color: $whiteColor;
             width: 100%;
-           
-            .tag{
+            .tag {
                 position: relative;
                 top: 2rem;
                 left: 2rem;
             }
-            .info{
+            .info {
                 padding: 2rem;
                 display: block;
                 position: relative;
-                top:16rem;
-
-                .Events__title{
-                   p{
-                    font-weight: 600;
-                    padding: 2rem 0;
-                   }
+                top: 16rem;
+                .Events__title {
+                    p {
+                        font-weight: 600;
+                        padding: 2rem 0;
+                    }
                 }
-
-                button{
-                    padding: .8rem;
-
-                    &:hover{
+                button {
+                    padding: 0.8rem;
+                    &:hover {
                         border-color: $redColor;
                         outline: none;
                         background-color: $redColor;
                     }
                 }
             }
-            .hover{
+            .hover {
                 position: relative;
                 padding: 2rem;
                 display: none;
-                top:7.3rem;
+                top: 7.3rem;
                 background-color: $cardColor;
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 border-radius: 5px;
-
-
-                .Events__title{
-                   p{
-                    font-weight: 600;
-                    padding: 2rem 0;
-                   }
+                .Events__title {
+                    p {
+                        font-weight: 600;
+                        padding: 2rem 0;
+                    }
                 }
-
-                button{
-                    margin-top: 1rem ;
-                    padding: .8rem;
-
-                    &:hover{
+                button {
+                    margin-top: 1rem;
+                    padding: 0.8rem;
+                    &:hover {
                         border-color: $redColor;
                         outline: none;
                         background-color: $redColor;
                     }
                 }
             }
-
-            &:hover{
-                .info{
+            &:hover {
+                .info {
                     display: none;
                 }
-
-                .hover{
+                .hover {
                     display: block;
                 }
             }
         }
-        
     }
-
-    &__bottom{
+    &__bottom {
         padding: 2rem 0;
-        a{
+        a {
             font-weight: bold;
-
-            ion-icon{
+            ion-icon {
                 position: relative;
-                top:.4rem;
-                padding: 0 .5rem;
+                top: 0.4rem;
+                padding: 0 0.5rem;
                 font-size: 15px;
                 font-weight: bold;
             }
         }
     }
-  
-    
 }
 
-.footer{
-    margin-top:-10rem;
+.footer {
+    margin-top: -10rem;
 }

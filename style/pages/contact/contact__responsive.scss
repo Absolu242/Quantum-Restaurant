@@ -1,33 +1,24 @@
-
-
-@media(max-width:768px){
-
-    @import '../../main.scss';
-
-
-    .Location{
-      
-        &__content{
-            width:90%;
-        
-            .contact{
-                &--content{
+@media (max-width: 768px) {
+    @import "../../main.scss";
+    .header {
+        height: 30rem;
+    }
+    .Location {
+        &__content {
+            width: 90%;
+            .contact {
+                &--content {
                     width: 90%;
-                   display: block;
+                    display: block;
                 }
-
-                &--item{
+                &--item {
                     color: $whiteColor;
                     padding: 2rem 0;
-        
                 }
             }
         }
-
-        
     }
-
-    .footer{
-        margin-top:-10rem;
+    .footer {
+        margin-top: -10rem;
     }
 }

@@ -1,130 +1,93 @@
-@import '../../main.scss';
-
-@media(max-width:768px){
-    
-.header{
-
-    /*******Nav End ******/
-
-    &__center{
-        z-index: 9;
-        @include centerAll();
-        text-align: center;
-
-        &--content{
-            padding: 10rem 0;
-        }
-
-        &--text{
-            p{
-                width: 35rem;
+@import "../../main.scss";
+@media (max-width: 768px) {
+    .header {
+        /*******Nav End ******/
+        &__center {
+            z-index: 9;
+            @include centerAll();
+            text-align: center;
+            &--content {
+                padding: 10rem 0;
             }
-        }
-
-        &--button{
-            @include centerAll();
-        }
-    }
-
-    &__bottom{
-    
-        &--content{
-            @include centerAll();
-
-        }
-
-        &--item{
-            padding-bottom: 2rem ;
-        }
-    }
-
-}
-
-.about{
- 
-    &__content{
-        padding: 5rem 0;
-        @include centerAll();
-        width: 90%;
-        background-color: $cardColor;
-
-       
-        .title{
-            .shadow{
-                &::after {
-                    left: 12.5rem;
+            &--text {
+                p {
+                    width: 35rem;
                 }
             }
-
-            .top{
-                letter-spacing: .2rem;
+            &--button {
+                @include centerAll();
+            }
+        }
+        &__bottom {
+            &--content {
+                @include centerAll();
+            }
+            &--item {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+    .about {
+        &__content {
+            padding: 5rem 0;
+            @include centerAll();
+            width: 90%;
+            background-color: $cardColor;
+            .title {
+                .shadow {
+                    &::after {
+                        left: 12.5rem;
+                    }
+                }
+                .top {
+                    letter-spacing: 0.2rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        &__text {
+            text-align: center;
+        }
+        &__description {
+            padding: 2rem 0;
+            p {
                 font-size: 1.4rem;
+                width: 30rem;
+                line-height: 2rem;
             }
-
         }
-
-    }
-
-    &__text{
-        text-align: center;
-        padding: 5rem;
-    }
-
-    &__description{
-        padding: 2rem 0;
-        p{
-            font-size: 1.4rem;
-            width: 30rem;
-            line-height: 2rem;
+        &__sliders {
+            @include centerAll();
         }
-    }
-
-    &__sliders{
-        @include centerAll();
-
-    }
-
-    &__slider{
-        padding: 1rem 0;
-        
-        img{
-            width:30rem
-        }
-    }
-
-}
-
-.events{
-    width:100%;
-    &__content{
-        width:100%;
-    }
-
-    .grid{
-        width:100%;
-        &__content{
-            width:100%;
-           display: grid;
-           grid-template-columns: 1fr;
-           grid-template-rows: 350px;
-        }
-
-        &__event{
-            margin: 1rem 0;
-        }
-    }
-}
-
-    .social{
-        
-            &__items{
-                margin-top: 5rem ;
-                width: 25rem;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 250px;
-                
+        &__slider {
+            padding: 1rem 0;
+            img {
+                width: 30rem;
             }
+        }
     }
-
+    .events {
+        &__content {
+            width: 100%;
+        }
+        .grid {
+            &__content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &__event {
+                margin: 1rem 0;
+            }
+        }
+    }
+    .social {
+        &__items {
+            margin-top: 5rem;
+            width: 25rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 250px;
+        }
+    }
 }

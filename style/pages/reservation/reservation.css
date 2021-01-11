@@ -149,12 +149,12 @@ p {
   border-top: 2px solid #4d4d4d;
 }
 
-.header__logo {
-  font-size: 2.5rem;
+.header__nav input {
+  display: none;
 }
 
-.header__menuIcon, .header input {
-  display: none;
+.header__logo {
+  font-size: 2.5rem;
 }
 
 .header__overlay {
@@ -182,7 +182,7 @@ p {
 
 .header__overlay .reservation ion-icon {
   position: relative;
-  top: .5rem;
+  top: 0.5rem;
   padding: 0 1.5rem;
   font-size: 2.5rem;
 }
@@ -221,35 +221,10 @@ p {
     padding-bottom: 10rem;
   }
   .header__nav {
-    z-index: 9;
+    position: relative;
+    z-index: 99999;
     padding: 3rem;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    border-bottom: 2px solid #4d4d4d;
-    border-top: 2px solid #4d4d4d;
-  }
-  .header__logo {
-    font-size: 2.5rem;
-  }
-  .header__menuIcon, .header input {
-    display: none;
-  }
-  .header__overlay {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -259,9 +234,41 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 45%;
-    font-size: 1.5rem;
+    border-bottom: 2px solid #4d4d4d;
+    border-top: 2px solid #4d4d4d;
+  }
+  .header__logo {
+    font-size: 2.5rem;
+  }
+  .header .header__nav #overlay {
     display: none;
+  }
+  .header .header__nav #overlay:checked ~ .header__overlay {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .header__menuIcon ion-icon {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .header__overlay {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    font-size: 1.5rem;
+    display: block;
+    position: absolute;
+    background-color: #212121;
+    top: 8.5rem;
+    left: 0rem;
+    z-index: 999999;
+    padding: 5rem 2rem;
+    border: none;
   }
   .header__overlay .reservation {
     display: -webkit-box;
@@ -273,28 +280,28 @@ p {
   }
   .header__overlay .reservation ion-icon {
     position: relative;
-    top: .5rem;
+    top: 0.5rem;
     padding: 0 1.5rem;
     font-size: 2.5rem;
   }
   .header__list--pages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
     list-style: none;
+    width: 100%;
   }
   .header__item {
     padding: 0 1rem;
+    width: 30rem;
+    padding: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 .footer {
-  padding-top: 5rem;
-  margin-top: 30rem;
+  position: relative;
+  top: 15rem;
   width: 100%;
+  padding: 3rem 0;
   background-color: #262626;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,7 +411,7 @@ p {
 
 .footer__top--item .link ion-icon {
   position: relative;
-  top: .3rem;
+  top: 0.3rem;
   padding-right: 1rem;
 }
 
@@ -451,7 +458,7 @@ p {
 
 .Reservation {
   position: relative;
-  top: -40rem;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,12 +511,13 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 5rem;
+  padding: 5rem 0;
+  padding-left: 5rem;
   width: 100%;
 }
 
 .Reservation__table--content .table--left {
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #808080;
   border-radius: 50%;
   margin-right: 2rem;
@@ -541,9 +549,16 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.Reservation__table--content .table--right .form__table--content .input input, .Reservation__table--content .table--right .form__table--content .input select, .Reservation__table--content .table--right .form__table--content .input button {
+.Reservation__table--content .table--right .form__table--content .input input,
+.Reservation__table--content .table--right .form__table--content .input select,
+.Reservation__table--content .table--right .form__table--content .input button {
   background: none;
   padding: 1rem 2rem;
   color: #808080;
@@ -560,6 +575,7 @@ p {
   color: #fff;
   border: none;
   padding: 1.3rem 2rem;
+  margin: 1rem 0;
 }
 
 .Reservation__table--content .table--right .available__content {
@@ -603,7 +619,7 @@ p {
 }
 
 .Reservation__info--content .info--left {
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   border: 1px solid #808080;
   border-radius: 50%;
   margin-right: 2rem;
@@ -624,7 +640,7 @@ p {
 }
 
 .Reservation__info--content .info--right .form__info {
-  width: 65%;
+  min-width: 65%;
   padding: 2rem 0;
 }
 
@@ -644,7 +660,16 @@ p {
           align-items: center;
 }
 
-.Reservation__info--content .info--right .form__info--content .input input, .Reservation__info--content .info--right .form__info--content .input select, .Reservation__info--content .info--right .form__info--content .input button {
+.Reservation__info--content .info--right .form__info--content .input {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.Reservation__info--content .info--right .form__info--content .input input,
+.Reservation__info--content .info--right .form__info--content .input select,
+.Reservation__info--content .info--right .form__info--content .input button {
   background: none;
   color: #fff;
   border: none;
@@ -653,19 +678,27 @@ p {
   outline: none;
 }
 
-.Reservation__info--content .info--right .form__info--content .input input::-webkit-input-placeholder, .Reservation__info--content .info--right .form__info--content .input select::-webkit-input-placeholder, .Reservation__info--content .info--right .form__info--content .input button::-webkit-input-placeholder {
+.Reservation__info--content .info--right .form__info--content .input input::-webkit-input-placeholder,
+.Reservation__info--content .info--right .form__info--content .input select::-webkit-input-placeholder,
+.Reservation__info--content .info--right .form__info--content .input button::-webkit-input-placeholder {
   color: #808080;
 }
 
-.Reservation__info--content .info--right .form__info--content .input input:-ms-input-placeholder, .Reservation__info--content .info--right .form__info--content .input select:-ms-input-placeholder, .Reservation__info--content .info--right .form__info--content .input button:-ms-input-placeholder {
+.Reservation__info--content .info--right .form__info--content .input input:-ms-input-placeholder,
+.Reservation__info--content .info--right .form__info--content .input select:-ms-input-placeholder,
+.Reservation__info--content .info--right .form__info--content .input button:-ms-input-placeholder {
   color: #808080;
 }
 
-.Reservation__info--content .info--right .form__info--content .input input::-ms-input-placeholder, .Reservation__info--content .info--right .form__info--content .input select::-ms-input-placeholder, .Reservation__info--content .info--right .form__info--content .input button::-ms-input-placeholder {
+.Reservation__info--content .info--right .form__info--content .input input::-ms-input-placeholder,
+.Reservation__info--content .info--right .form__info--content .input select::-ms-input-placeholder,
+.Reservation__info--content .info--right .form__info--content .input button::-ms-input-placeholder {
   color: #808080;
 }
 
-.Reservation__info--content .info--right .form__info--content .input input::placeholder, .Reservation__info--content .info--right .form__info--content .input select::placeholder, .Reservation__info--content .info--right .form__info--content .input button::placeholder {
+.Reservation__info--content .info--right .form__info--content .input input::placeholder,
+.Reservation__info--content .info--right .form__info--content .input select::placeholder,
+.Reservation__info--content .info--right .form__info--content .input button::placeholder {
   color: #808080;
 }
 

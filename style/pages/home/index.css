@@ -149,12 +149,12 @@ p {
   border-top: 2px solid #4d4d4d;
 }
 
-.header__logo {
-  font-size: 2.5rem;
+.header__nav input {
+  display: none;
 }
 
-.header__menuIcon, .header input {
-  display: none;
+.header__logo {
+  font-size: 2.5rem;
 }
 
 .header__overlay {
@@ -182,7 +182,7 @@ p {
 
 .header__overlay .reservation ion-icon {
   position: relative;
-  top: .5rem;
+  top: 0.5rem;
   padding: 0 1.5rem;
   font-size: 2.5rem;
 }
@@ -221,35 +221,10 @@ p {
     padding-bottom: 10rem;
   }
   .header__nav {
-    z-index: 9;
+    position: relative;
+    z-index: 99999;
     padding: 3rem;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    border-bottom: 2px solid #4d4d4d;
-    border-top: 2px solid #4d4d4d;
-  }
-  .header__logo {
-    font-size: 2.5rem;
-  }
-  .header__menuIcon, .header input {
-    display: none;
-  }
-  .header__overlay {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -259,9 +234,41 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 45%;
-    font-size: 1.5rem;
+    border-bottom: 2px solid #4d4d4d;
+    border-top: 2px solid #4d4d4d;
+  }
+  .header__logo {
+    font-size: 2.5rem;
+  }
+  .header .header__nav #overlay {
     display: none;
+  }
+  .header .header__nav #overlay:checked ~ .header__overlay {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .header__menuIcon ion-icon {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .header__overlay {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    font-size: 1.5rem;
+    display: block;
+    position: absolute;
+    background-color: #212121;
+    top: 8.5rem;
+    left: 0rem;
+    z-index: 999999;
+    padding: 5rem 2rem;
+    border: none;
   }
   .header__overlay .reservation {
     display: -webkit-box;
@@ -273,28 +280,28 @@ p {
   }
   .header__overlay .reservation ion-icon {
     position: relative;
-    top: .5rem;
+    top: 0.5rem;
     padding: 0 1.5rem;
     font-size: 2.5rem;
   }
   .header__list--pages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
     list-style: none;
+    width: 100%;
   }
   .header__item {
     padding: 0 1rem;
+    width: 30rem;
+    padding: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 .footer {
-  padding-top: 5rem;
-  margin-top: 30rem;
+  position: relative;
+  top: 15rem;
   width: 100%;
+  padding: 3rem 0;
   background-color: #262626;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,7 +411,7 @@ p {
 
 .footer__top--item .link ion-icon {
   position: relative;
-  top: .3rem;
+  top: 0.3rem;
   padding-right: 1rem;
 }
 
@@ -450,7 +457,6 @@ p {
 }
 
 .header__center {
-  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,6 +470,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: -9999999;
   text-align: center;
 }
 
@@ -488,7 +495,7 @@ p {
   padding: 1.3rem 2.5rem;
   margin: 0 1.5rem;
   font-weight: 500;
-  margin: 1rem   .5rem;
+  margin: 1rem 0.5rem;
 }
 
 .header__center--button button p {
@@ -498,7 +505,7 @@ p {
 
 .header__center--button button ion-icon {
   position: relative;
-  top: .3rem;
+  top: 0.3rem;
   padding-right: 1rem;
   font-size: 1.8rem;
 }
@@ -559,7 +566,7 @@ p {
 
 .header__bottom--item .link ion-icon {
   position: relative;
-  top: .3rem;
+  top: 0.3rem;
   padding-right: 1rem;
 }
 
@@ -584,7 +591,7 @@ p {
 }
 
 .about__content {
-  padding: 5rem;
+  padding: 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -609,7 +616,7 @@ p {
 
 .about__text {
   text-align: center;
-  padding: 5rem;
+  padding: 5rem 0;
 }
 
 .about__description p {
@@ -652,8 +659,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   justify-content: center;
-  width: 100%;
-  position: relative;
+  max-width: 100%;
 }
 
 .events__content {
@@ -671,31 +677,18 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  min-width: 50%;
 }
 
 .events .grid {
   position: relative;
   top: 2rem;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .events .grid__content {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -706,7 +699,7 @@ p {
 }
 
 .events .grid__blog {
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,8 +737,8 @@ p {
 }
 
 .events .grid__blog .post__share button {
-  padding: .6rem .8rem;
-  margin: .5rem;
+  padding: 0.6rem 0.8rem;
+  margin: 0.5rem;
   border-radius: 50%;
   background-color: rgba(97, 96, 96, 0.514);
 }
@@ -775,8 +768,8 @@ p {
 
 .events .grid__blog .post__actions a ion-icon {
   position: relative;
-  top: .2rem;
-  padding: 0 .2rem;
+  top: 0.2rem;
+  padding: 0 0.2rem;
 }
 
 .events .grid__events {
@@ -796,11 +789,12 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 100%;
 }
 
 .events .grid__event {
   background-color: #262626;
-  padding: 2rem;
+  padding: 2rem 0.2rem;
   border-radius: 5px;
 }
 
@@ -826,8 +820,8 @@ p {
 .events .grid__event:hover a ion-icon {
   color: #4d4d4d;
   position: relative;
-  top: .2rem;
-  padding: 0 .2rem;
+  top: 0.2rem;
+  padding: 0 0.2rem;
 }
 
 .events .grid .event__title {
@@ -872,8 +866,8 @@ p {
 
 .events .grid .event__bottom--item a ion-icon {
   position: relative;
-  top: .2rem;
-  padding: 0 .2rem;
+  top: 0.2rem;
+  padding: 0 0.2rem;
 }
 
 .social {
@@ -928,7 +922,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
+  min-width: 50%;
 }
 
 .social__items {
@@ -981,20 +975,20 @@ p {
 }
 
 .social__item--top div span {
-  padding: .7rem .8rem;
+  padding: 0.7rem 0.8rem;
   border-radius: 50%;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   font-size: 1.2rem;
 }
 
 .social__item--top div span ion-icon {
   position: relative;
-  top: .2rem;
-  left: .1rem;
+  top: 0.2rem;
+  left: 0.1rem;
 }
 
 .social__item--top button {
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   color: #fff;
   background: none;
   border: none;
@@ -1038,11 +1032,11 @@ p {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-gap: 2rem;
-  grid-gap: .1rem;
+  grid-gap: 0.1rem;
 }
 
 .social__item--images img {
   width: 7.5rem;
-  padding-bottom: .2rem;
+  padding-bottom: 0.2rem;
 }
 /*# sourceMappingURL=index.css.map */

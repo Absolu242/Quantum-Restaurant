@@ -1,35 +1,28 @@
-@import '../../main.scss';
-
-@media(max-width:768px){
-
-
-    .Events{
-    
-        .title{
-            .shadow{
+@import "../../main.scss";
+@media (max-width: 768px) {
+    .header {
+        height: 30rem;
+    }
+    .Events {
+        .title {
+            .shadow {
                 &::after {
                     top: 3rem;
                     left: 45%;
                 }
             }
         }
-
-
-        &__center{
-            width:100%;
+        &__center {
+            width: 100%;
             padding: 3rem 0;
-        
-
-            &--content{
+            &--content {
                 position: relative;
-                display:grid;
-                width:100%;
+                display: grid;
+                width: 100%;
                 grid-template-columns: 250px;
-                grid-template-rows:repeat(6,350px);
-                grid-gap:1rem;
+                grid-template-rows: repeat(6, 350px);
+                grid-gap: 1rem;
             }
         }
-    
-        
     }
 }
